@@ -576,7 +576,7 @@ body {
 
 /* Subtítulo */
 .value7k__subtitle {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.7;
   color: rgba(0, 0, 0, 0.7);
   text-align: justify;
@@ -599,7 +599,7 @@ body {
 }
 
 .value7k__paragraph {
-  font-size: 16px;
+  font-size: 19px;
   line-height: 1.7;
   color: rgba(0, 0, 0, 0.8);
   text-align: justify; /* justificado */
