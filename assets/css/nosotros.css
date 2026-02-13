@@ -1,0 +1,522 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+/* ===========================
+   VARIABLES DE MARCA 7K DIGITAL
+   =========================== */
+:root {
+  /* Colores principales */
+  --color-primary: #19BB94;      /* Verde principal */
+  --color-primary-alt: #22DFB2;  /* Variante */
+  --color-accent: #00FFCC;       /* Acento brillante */
+  --color-accent-soft: #79F1D5;  /* Acento suave */
+
+  /* Neutros */
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-bg-main: #FAFAFA;      /* fondo general suave */
+  --color-bg-header: #FAFAFA;    /* fondo header */
+  --color-bg-hover: #F5F5F5;     /* hover suave */
+  --color-border-soft: #E0E0E0;
+  --color-border-subtle: #CCCCCC;
+  --color-border-item: #EEEEEE;
+
+  /* Tipografías (asegúrate de importarlas en el HTML o CSS) */
+  --font-heading: "Raleway", serif;
+  --font-heading-secundary: "Baskervville", serif; ; 
+  --font-body: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-script: "Rhode White", "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Otros */
+  --radius-soft: 0px;
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.45s cubic-bezier(0.25, 0.8, 0.4, 1);
+}
+
+/* ===== ABOUT 7K (similar a referencia) ===== */
+.about7k{
+  background: var(--color-bg-main);
+  color: var(--color-black);
+  padding: 70px 16px 80px;
+}
+
+.about7k__inner{
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Head */
+.about7k__header{
+  text-align: center;
+  margin-bottom: 42px;
+}
+
+.about7k__kicker{
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(0,0,0,.55);
+  margin-bottom: 14px;
+}
+
+.about7k__headline{
+  font-family: var(--font-heading);
+  font-size: clamp(30px, 4.6vw, 64px);
+  line-height: 1.05;
+  font-weight: 700;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about7k__headline span{
+  color: rgba(0,0,0,.35);
+}
+
+/* Grid */
+.about7k__grid{
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 34px;
+  align-items: start;
+}
+
+/* Media card (izquierda) */
+.about7k__media{
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  background: #111;
+  min-height: 420px;
+  box-shadow: 0 22px 70px rgba(15,23,42,.10);
+}
+
+.about7k__img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.02);
+  transition: transform var(--transition-medium), filter var(--transition-medium);
+  filter: contrast(1.02) saturate(1.02);
+}
+
+.about7k__media:hover .about7k__img{
+  transform: scale(1.06);
+  filter: contrast(1.05) saturate(1.1);
+}
+
+.about7k__plus{
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  width: 54px;
+  height: 54px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.22);
+  background: rgba(255,255,255,.14);
+  backdrop-filter: blur(8px);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: transform var(--transition-fast), background var(--transition-fast);
+  color: #fff;
+  font-size: 22px;
+}
+
+.about7k__plus:hover{
+  transform: translateY(-2px);
+  background: rgba(34,223,178,.22);
+}
+
+/* Content (derecha) */
+.about7k__content{
+  padding-top: 12px;
+}
+
+/* Tabs */
+.about7k__tabs{
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.about7k__tab{
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 700;
+  color: rgba(0,0,0,.35);
+  padding: 10px 2px;
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+.about7k__tab.is-active{
+  color: rgba(0,0,0,.9);
+}
+
+.about7k__tab.is-active::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 100%;
+  height: 2px;
+  background: rgba(34,223,178,.7);
+  border-radius: 999px;
+}
+
+/* Panels */
+.about7k__panel{
+  display: none;
+  animation: about7kFade .35s ease both;
+}
+
+.about7k__panel.is-active{
+  display: block;
+}
+
+@keyframes about7kFade{
+  from{ opacity: 0; transform: translateY(8px); }
+  to{ opacity: 1; transform: translateY(0); }
+}
+
+.about7k__text{
+  font-size: 15px;
+  line-height: 1.9;
+  color: rgba(0,0,0,.72);
+  margin-bottom: 14px;
+  text-align: justify;
+}
+
+/* Awards row */
+.about7k__awards{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 26px;
+}
+
+.about7k__award{
+  padding: 16px 16px;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.06);
+  box-shadow: 0 12px 40px rgba(15,23,42,.06);
+}
+
+.about7k__award-title{
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 16px;
+  color: rgba(0,0,0,.92);
+}
+
+.about7k__award-sub{
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  color: rgba(0,0,0,.55);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 980px){
+  .about7k{
+    padding: 54px 14px 60px;
+  }
+
+  .about7k__grid{
+    grid-template-columns: 1fr;
+  }
+
+  .about7k__media{
+    min-height: 340px;
+  }
+
+  .about7k__tabs{
+    justify-content: flex-start;
+  }
+
+  .about7k__tab{
+    font-size: 20px;
+  }
+
+  .about7k__awards{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px){
+  .about7k__header{
+    margin-bottom: 26px;
+  }
+
+  .about7k__media{
+    border-radius: 22px;
+    min-height: 300px;
+  }
+
+  .about7k__plus{
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+  }
+
+  .about7k__text{
+    font-size: 14px;
+    line-height: 1.85;
+  }
+}
+
+
+/* =========================
+   SECTION: Team 7K (AJUSTES)
+   - Imágenes cuadradas completas (sin recorte)
+   - Grid 3 columnas en escritorio (3 arriba / 2 abajo si hay 5)
+   - Nombre y cargo centrados
+   ========================= */
+
+.team7k{
+  background: var(--color-bg-main);
+  color: var(--color-black);
+  padding: 70px 18px;
+}
+
+.team7k__inner{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.team7k__header{
+  text-align: center;
+  margin-bottom: 34px;
+}
+
+.team7k__kicker{
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(0,0,0,.55);
+  margin-bottom: 10px;
+}
+
+.team7k__title{
+  font-family: var(--font-heading);
+  font-size: clamp(28px, 4.6vw, 44px);
+  line-height: 1.1;
+  margin: 0 0 12px;
+}
+
+.team7k__title span{
+  color: var(--color-primary-alt);
+}
+
+.team7k__lead{
+  max-width: 820px;
+  margin: 0 auto;
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(0,0,0,.72);
+}
+
+/* Grid: 3 en 3 en escritorio */
+.team7k__grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 26px;
+}
+
+/* Card */
+.team7k__card{
+  background: rgba(255,255,255,.85);
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 24px;
+  box-shadow: 0 18px 55px rgba(15,23,42,.06);
+  overflow: hidden;
+  transition: transform var(--transition-medium),
+              box-shadow var(--transition-medium),
+              border-color var(--transition-medium),
+              background var(--transition-medium);
+  position: relative;
+}
+
+/* Glow suave al hover (verde) */
+.team7k__card::before{
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: radial-gradient(
+    600px circle at var(--mx, 50%) var(--my, 50%),
+    rgba(34, 223, 178, 0.22),
+    transparent 55%
+  );
+  opacity: 0;
+  transition: opacity var(--transition-medium);
+  pointer-events: none;
+}
+
+.team7k__card:hover::before{ opacity: 1; }
+
+.team7k__card:hover{
+  transform: translateY(-6px);
+  border-color: rgba(25,187,148,.35);
+  background: rgba(255,255,255,.95);
+  box-shadow: 0 30px 85px rgba(25,187,148,.14);
+}
+
+/* ===== Imagen SIN RECORTE =====
+   Tus imágenes son cuadradas, así que usamos aspecto 1:1 y object-fit: contain */
+.team7k__media{
+  aspect-ratio: 1 / 1;
+  background: rgba(0,0,0,.03);
+  border-radius: 22px 22px 0 0;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  padding: 12px; /* aire para que no pegue al borde */
+}
+
+.team7k__media img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;   /* <<< clave: se ve completa */
+  object-position: center;
+  transform: none;
+  transition: transform var(--transition-medium), filter var(--transition-medium);
+}
+
+/* Hover sutil SIN recortar */
+.team7k__card:hover .team7k__media img{
+  transform: scale(1.02);
+  filter: contrast(1.02) saturate(1.02);
+}
+
+/* Body centrado */
+.team7k__body{
+  padding: 18px 18px 20px;
+  text-align: center;     /* <<< centra nombre y cargo */
+}
+
+.team7k__name{
+  font-family: var(--font-heading);
+  font-size: 18px;
+  margin: 0 0 6px;
+}
+
+.team7k__role{
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(0,0,0,.60);
+}
+
+/* (Opcional) hover-follow para glow si usas JS */
+.team7k__card{
+  --mx: 50%;
+  --my: 50%;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1100px){
+  .team7k__grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 860px){
+  .team7k{
+    padding: 56px 14px;
+  }
+
+  .team7k__lead{
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 520px){
+  .team7k{
+    padding: 44px 14px;
+  }
+
+  .team7k__grid{
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .team7k__body{
+    padding: 16px 16px 18px;
+  }
+
+  .team7k__name{
+    font-size: 17px;
+  }
+
+  .team7k__media{
+    padding: 10px;
+  }
+}
+
+/* =========================
+   DESTACADO CEO (Salvador)
+   ========================= */
+
+.team7k__card--ceo {
+  border-color: rgba(25, 187, 148, 0.55);
+  box-shadow:
+    0 28px 85px rgba(25, 187, 148, 0.18),
+    0 0 0 1px rgba(25, 187, 148, 0.15);
+  background: rgba(255, 255, 255, 0.98);
+}
+
+/* Glow más fuerte solo para CEO */
+.team7k__card--ceo::before {
+  opacity: 1;
+  background: radial-gradient(
+    650px circle at 50% 20%,
+    rgba(34, 223, 178, 0.35),
+    transparent 60%
+  );
+}
+
+/* Imagen del CEO con un poquito más de presencia */
+.team7k__card--ceo .team7k__media img {
+  transform: scale(1.04);
+}
+
+/* Hover especial */
+.team7k__card--ceo:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 36px 100px rgba(25, 187, 148, 0.28),
+    0 0 0 1px rgba(25, 187, 148, 0.25);
+}
+
+/* Nombre CEO ligeramente más fuerte */
+.team7k__card--ceo .team7k__name {
+  font-size: 19px;
+}
+
+/* Badge CEO */
+.team7k__card--ceo .team7k__body::before {
+  content: "CEO";
+  display: inline-block;
+  margin-bottom: 8px;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  font-family: var(--font-heading);
+}

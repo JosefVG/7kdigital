@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+/* ===========================
+   VARIABLES DE MARCA 7K DIGITAL
+   =========================== */
+:root {
+  /* Colores principales */
+  --color-primary: #19BB94;      /* Verde principal */
+  --color-primary-alt: #22DFB2;  /* Variante */
+  --color-accent: #00FFCC;       /* Acento brillante */
+  --color-accent-soft: #79F1D5;  /* Acento suave */
+
+  /* Neutros */
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-bg-main: #FAFAFA;      /* fondo general suave */
+  --color-bg-header: #FAFAFA;    /* fondo header */
+  --color-bg-hover: #F5F5F5;     /* hover suave */
+  --color-border-soft: #E0E0E0;
+  --color-border-subtle: #CCCCCC;
+  --color-border-item: #EEEEEE;
+
+  /* Tipografías (asegúrate de importarlas en el HTML o CSS) */
+  --font-heading: "Raleway", serif;
+  --font-heading-secundary: "Baskervville", serif; ; 
+  --font-body: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-script: "Rhode White", "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Otros */
+  --radius-soft: 0px;
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.45s cubic-bezier(0.25, 0.8, 0.4, 1);
+}
+
+/* =========================
+   Variante: Consultoría
+   ========================= */
+.offer7k--consultoria .offer7k__kicker {
+  color: rgba(0, 0, 0, 0.52);
+}
+
+.offer7k--consultoria .offer7k__title span {
+  color: var(--color-primary);
+}
+
+.offer7k--consultoria .offer7k__cta:hover {
+  border-color: rgba(25, 187, 148, 0.45);
+  background: rgba(25, 187, 148, 0.10);
+  box-shadow: 0 26px 70px rgba(25, 187, 148, 0.16);
+}
+
+.offer7k--consultoria .offer7k__card:hover {
+  box-shadow: 0 30px 85px rgba(25, 187, 148, 0.16);
+}
+
+/* Iconos un poco más “estratégicos” al hover */
+.offer7k--consultoria .offer7k__card:hover .offer7k__icon {
+  transform: translateY(-2px) rotate(-1deg);
+}

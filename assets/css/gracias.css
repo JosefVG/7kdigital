@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+/* ===========================
+   VARIABLES DE MARCA 7K DIGITAL
+   =========================== */
+:root {
+  /* Colores principales */
+  --color-primary: #19BB94;      /* Verde principal */
+  --color-primary-alt: #22DFB2;  /* Variante */
+  --color-accent: #00FFCC;       /* Acento brillante */
+  --color-accent-soft: #79F1D5;  /* Acento suave */
+
+  /* Neutros */
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-bg-main: #FAFAFA;      /* fondo general suave */
+  --color-bg-header: #FAFAFA;    /* fondo header */
+  --color-bg-hover: #F5F5F5;     /* hover suave */
+  --color-border-soft: #E0E0E0;
+  --color-border-subtle: #CCCCCC;
+  --color-border-item: #EEEEEE;
+
+  /* Tipografías (asegúrate de importarlas en el HTML o CSS) */
+  --font-heading: "Raleway", serif;
+  --font-heading-secundary: "Baskervville", serif; ; 
+  --font-body: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-script: "Rhode White", "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Otros */
+  --radius-soft: 0px;
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.45s cubic-bezier(0.25, 0.8, 0.4, 1);
+}
+
+/* ===== Gracias | 7K Digital ===== */
+.thanks7k__body{
+  background: var(--color-bg-main);
+  color: var(--color-black);
+}
+
+/* Layout */
+.thanks7k{
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 40px 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glow sutil tipo 7K */
+.thanks7k::before{
+  content:"";
+  position:absolute;
+  inset:-30%;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(34,223,178,.18), transparent 40%),
+    radial-gradient(circle at 80% 40%, rgba(25,187,148,.14), transparent 45%),
+    radial-gradient(circle at 50% 85%, rgba(0,255,204,.10), transparent 55%);
+  filter: blur(30px);
+  z-index: 0;
+}
+
+.thanks7k__wrap{
+  width: 100%;
+  max-width: 980px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Top brand */
+.thanks7k__top{
+  display:flex;
+  justify-content:center;
+  margin-bottom: 18px;
+}
+
+.thanks7k__brand{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap: 12px;
+  text-decoration:none;
+  padding: 10px 12px;
+  border-radius: 999px;
+  transition: transform var(--transition-fast), background var(--transition-fast);
+}
+
+.thanks7k__brand:hover{
+  transform: translateY(-1px);
+  background: rgba(0,0,0,.04);
+}
+
+.thanks7k__logo{
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Card */
+.thanks7k__card{
+  background: rgba(255,255,255,.9);
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 28px;
+  padding: 34px 32px;
+  box-shadow: 0 22px 70px rgba(15,23,42,.10);
+  backdrop-filter: blur(8px);
+}
+
+.thanks7k__badge{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(34,223,178,.14);
+  border: 1px solid rgba(34,223,178,.25);
+  color: rgba(0,0,0,.78);
+  font-size: 13px;
+  letter-spacing: .04em;
+  margin-bottom: 16px;
+}
+
+.thanks7k__badge-dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--color-primary-alt);
+  box-shadow: 0 0 0 6px rgba(34,223,178,.14);
+}
+
+.thanks7k__title{
+  font-family: var(--font-heading);
+  font-size: clamp(28px, 4vw, 56px);
+  line-height: 1.05;
+  margin: 0 0 14px;
+  letter-spacing: -0.02em;
+}
+
+.thanks7k__text{
+  font-size: 15px;
+  line-height: 1.85;
+  color: rgba(0,0,0,.72);
+  margin: 0 0 22px;
+}
+
+/* Actions */
+.thanks7k__actions{
+  display:flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items:center;
+}
+
+.thanks7k__btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap: 10px;
+  padding: 14px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,.10);
+  text-decoration:none;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .02em;
+  transition: transform var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+  user-select:none;
+}
+
+.thanks7k__btn i{
+  font-size: 18px;
+}
+
+/* WhatsApp primary */
+.thanks7k__btn--whatsapp{
+  background: var(--color-primary-alt); /* #22DFB2 */
+  color: #06251e;
+  border-color: rgba(0,0,0,.08);
+  box-shadow: 0 14px 40px rgba(34,223,178,.22);
+}
+
+.thanks7k__btn--whatsapp:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 18px 54px rgba(34,223,178,.30);
+}
+
+/* Ghost */
+.thanks7k__btn--ghost{
+  background: transparent;
+  color: rgba(0,0,0,.78);
+}
+
+.thanks7k__btn--ghost:hover{
+  background: rgba(0,0,0,.04);
+  transform: translateY(-1px);
+}
+
+.thanks7k__divider{
+  height: 1px;
+  background: rgba(0,0,0,.08);
+  margin: 22px 0 18px;
+}
+
+/* Redirect text + progress */
+.thanks7k__redirect-text{
+  margin: 0 0 10px;
+  font-size: 13px;
+  color: rgba(0,0,0,.62);
+}
+
+.thanks7k__seconds{
+  font-weight: 800;
+  color: rgba(0,0,0,.86);
+}
+
+.thanks7k__progress{
+  width: 100%;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(0,0,0,.06);
+  overflow: hidden;
+}
+
+.thanks7k__progress-bar{
+  display:block;
+  height: 100%;
+  width: 0%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, rgba(34,223,178,.95), rgba(25,187,148,.95));
+  transition: width .25s linear;
+}
+
+/* Footer */
+.thanks7k__footer{
+  text-align:center;
+  margin-top: 16px;
+  font-size: 12px;
+  color: rgba(0,0,0,.45);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 640px){
+  .thanks7k{
+    padding: 28px 14px;
+  }
+
+  .thanks7k__card{
+    padding: 26px 18px;
+    border-radius: 22px;
+  }
+
+  .thanks7k__logo{
+    height: 40px;
+  }
+
+  .thanks7k__text{
+    font-size: 14px;
+  }
+
+  .thanks7k__actions{
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .thanks7k__btn{
+    width: 100%;
+  }
+}
+
+/* ===== Alineación centrada título y badge ===== */
+
+.thanks7k__card {
+  text-align: center; /* centra texto general dentro de la card */
+}
+
+.thanks7k__badge {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Título centrado explícitamente */
+.thanks7k__title {
+  text-align: center;
+}
+
+/* Texto principal también centrado (opcional, se ve más elegante) */
+.thanks7k__text {
+  text-align: center;
+}
+
+/* Acciones centradas */
+.thanks7k__actions {
+  justify-content: center;
+}
+
+/* En móvil mantiene la armonía */
+@media (max-width: 640px) {
+  .thanks7k__card {
+    text-align: center;
+  }
+}
