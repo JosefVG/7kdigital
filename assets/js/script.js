@@ -117,3 +117,45 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// =========================================
+// VISUALIZAR IMAGENES EN GRANDE (SERVICIOS)
+// =========================================
+
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // 1. Obtenemos los elementos
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("imgExpanded");
+    const closeBtn = document.querySelector(".close-modal"); 
+
+    // 2. Seleccionamos todas las imágenes de la galería
+    const galleryImages = document.querySelectorAll('.services7k__gallery-card img');
+
+    // 3. "click" para ABRIR
+    galleryImages.forEach(img => {
+        img.addEventListener('click', function() {
+            modal.style.display = "flex"; // Mostrar el visor
+            modalImg.src = this.src;      // Poner la foto
+            // bloquear el scroll
+            document.body.style.overflow = "hidden"; 
+        });
+    });
+
+    // 4. boton de cerrar
+    if (closeBtn) {
+        closeBtn.onclick = function() { 
+            modal.style.display = "none";
+            // reactivar el scroll
+            document.body.style.overflow = ""; 
+        }
+    }
+
+    // 5. CERRAR con clic fuera de la imagen
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+            document.body.style.overflow = ""; 
+        }
+    }
+});

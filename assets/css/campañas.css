@@ -59,7 +59,7 @@
 .offer7k__kicker {
   display: inline-block;
   font-family: var(--font-heading);
-  font-size: 12px;
+  font-size: 29px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: rgba(0, 0, 0, 0.55);
@@ -68,7 +68,7 @@
 
 .offer7k__title {
   font-family: var(--font-heading);
-  font-size: clamp(28px, 4.6vw, 44px);
+  font-size: clamp(24px, 4.6vw, 40px);
   line-height: 1.1;
   margin: 0 0 12px;
 }
@@ -81,7 +81,7 @@
 .offer7k__lead {
   max-width: 760px;
   margin: 0 auto 18px;
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.7;
   color: rgba(0, 0, 0, 0.72);
 }

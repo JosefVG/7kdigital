@@ -75,6 +75,14 @@
   color: var(--color-primary-alt);
 }
 
+.about7k__subhead{
+  max-width: 820px;
+  margin: 18px auto 0;
+  font-size: 20px;
+  line-height: 1.7;
+  color: rgb(106, 106, 106);
+}
+
 /* Grid */
 .about7k__grid{
   display: grid;
