@@ -73,6 +73,15 @@
   margin: 0 0 12px;
 }
 
+/* texto card Control y medición (Impacto común) */
+.offer7k__impact {
+  display: inline-block;
+  font-family: var(--font-heading);
+  letter-spacing: 0.08em;
+  color: var(--color-black);
+  font-style: italic;
+}
+
 /* Si quieres que el highlight se vea como tus otras secciones */
 .offer7k__title span {
   color: var(--color-primary);

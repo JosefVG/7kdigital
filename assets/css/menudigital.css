@@ -330,8 +330,9 @@
    ========================= */
 .menus7k__grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(2, minmax(0, 400px));
+  justify-content: center;
+  gap: 20px;
   align-items: stretch; /* 🔥 clave: evita alturas raras */
 }
 
@@ -427,6 +428,14 @@
   font-size: 13px;
   line-height: 1.65;
   color: rgba(0, 0, 0, 0.72);
+}
+
+/* estilo de texto card ahorro y control (impacto común) */
+
+.offer7k__highlight {
+  display: block;
+  color: var(--color-black);
+  font-style: italic;
 }
 
 /* Pills / etiquetas */

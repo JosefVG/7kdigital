@@ -60,7 +60,6 @@
   font-family: var(--font-heading);
   font-size: 29px;
   letter-spacing: 0.22em;
-  text-transform: uppercase;
   color: rgba(0, 0, 0, 0.55);
   margin-bottom: 10px;
 }
@@ -197,6 +196,15 @@
   font-size: 13px;
   line-height: 1.65;
   color: rgba(0, 0, 0, 0.72);
+}
+
+/* estilo de texto card confianza y profesionalismo (impacto comun) */
+
+.offer7k__highlight {
+  display: inline-block;
+  font-size: 12px;
+  color: var(--color-black);
+  font-style: italic;
 }
 
 /* ===== Responsive ===== */

@@ -61,3 +61,11 @@
 .offer7k--social .offer7k__card:hover .offer7k__icon {
   transform: translateY(-2px) rotate(2deg);
 }
+
+
+/* estilo de texto en card Mensajes y comunidad (Impacto común) */
+.offer7k__impact {
+  display: inline-block;
+  color: var(--color-black);
+  font-style: italic;
+}
