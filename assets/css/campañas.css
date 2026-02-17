@@ -218,6 +218,13 @@
   color: rgba(0, 0, 0, 0.72);
 }
 
+.offer7k__impact {
+  display: inline-block;
+  color: var(--color-black);
+  font-style: italic;
+  font-size: 13px;
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 1100px) {
   .offer7k__grid {
