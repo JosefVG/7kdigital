@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ===========================
+   VARIABLES DE MARCA 7K DIGITAL
+   =========================== */
+:root {
+  --color-primary: #19BB94;      /* Verde principal */
+  --color-primary-alt: #22DFB2;  /* Variante */
+  --color-accent: #00FFCC;       /* Acento brillante */
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-bg-main: #FAFAFA;      
+  --color-bg-hover: #F5F5F5;     
+  --color-border-soft: #E0E0E0;
+
+  /* Tipografías */
+  --font-heading: "Raleway", serif;
+  --font-body: "Montserrat", system-ui, -apple-system, sans-serif;
+
+  /* Transiciones */
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.45s cubic-bezier(0.25, 0.8, 0.4, 1);
+}
+
+/* =========================
+   SECCIÓN 1: OFERTA PRINCIPAL (Estilo Offer7k)
+   ========================= */
+.offer7k {
+  background: var(--color-bg-main);
+  color: var(--color-black);
+  padding: 70px 18px;
+}
+
+.offer7k__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.offer7k__header {
+  text-align: center;
+  margin-bottom: 34px;
+}
+
+.offer7k__kicker {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 29px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.55);
+  margin-bottom: 10px;
+}
+
+.offer7k__title {
+  font-family: var(--font-heading);
+  font-size: clamp(24px, 4.6vw, 40px);
+  line-height: 1.1;
+  margin: 0 0 12px;
+}
+
+.offer7k__lead {
+  max-width: 760px;
+  margin: 0 auto 18px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: rgba(0, 0, 0, 0.72);
+}
+
+/* Botón CTA */
+.offer7k__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 12px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  color: var(--color-black);
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 18px 55px rgba(15, 23, 42, 0.06);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast),
+    background var(--transition-fast), border-color var(--transition-fast);
+}
+
+.offer7k__cta:hover {
+  transform: translateY(-2px);
+  border-color: rgba(25, 187, 148, 0.35);
+  background: rgba(25, 187, 148, 0.08);
+  box-shadow: 0 26px 70px rgba(25, 187, 148, 0.14);
+}
+
+/* Grid de Tarjetas */
+.offer7k__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/* Tarjetas Individuales */
+.offer7k__card {
+  position: relative;
+  padding: 18px 16px 16px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 18px 55px rgba(15, 23, 42, 0.06);
+  transition: transform var(--transition-medium), box-shadow var(--transition-medium),
+    border-color var(--transition-medium), background var(--transition-medium);
+  overflow: hidden;
+  --mx: 50%;
+  --my: 50%;
+}
+
+/* Efecto Glow Verde */
+.offer7k__card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: radial-gradient(
+    600px circle at var(--mx, 50%) var(--my, 50%),
+    rgba(34, 223, 178, 0.22),
+    transparent 55%
+  );
+  opacity: 0;
+  transition: opacity var(--transition-medium);
+  pointer-events: none;
+}
+
+.offer7k__card:hover::before {
+  opacity: 1;
+}
+
+.offer7k__card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(25, 187, 148, 0.35);
+  box-shadow: 0 30px 85px rgba(25, 187, 148, 0.14);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Iconos */
+.offer7k__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 12px;
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  transition: all var(--transition-medium);
+}
+
+.offer7k__icon i {
+  font-size: 22px;
+  color: rgba(0, 0, 0, 0.75);
+  transition: all var(--transition-medium);
+}
+
+.offer7k__card:hover .offer7k__icon {
+  transform: translateY(-2px) rotate(-2deg);
+  background: rgba(25, 187, 148, 0.12);
+  border-color: rgba(25, 187, 148, 0.35);
+  box-shadow: 0 18px 45px rgba(34, 223, 178, 0.18);
+}
+
+.offer7k__card:hover .offer7k__icon i {
+  transform: scale(1.12);
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.offer7k__card-title {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  margin: 0 0 8px;
+}
+
+.offer7k__text {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.65;
+  color: rgba(0, 0, 0, 0.72);
+}
+
+/* =========================================
+   TEXTO DE IMPACTO (Debajo de las cards)
+   ========================================= */
+
+.offer7k__impact-box {
+  margin-top: 40px; /* Separación de las tarjetas de arriba */
+  margin-bottom: 0; /* Sin margen abajo para pegarlo al siguiente bloque */
+  text-align: center;
+  padding: 0 18px;
+}
+
+.offer7k__impact-box strong {
+  color: var(--color-primary); /* "Impacto común" en verde */
+  font-weight: 700;
+  font-family: var(--font-heading);
+}
+
+.offer7k__impact-box strong {
+  color: var(--color-primary);
+  font-weight: 700;
+  font-family: var(--font-heading);
+}
+
+/* =========================
+   SECCIÓN 2: BENEFICIOS (WhyWeb Style)
+   ========================= */
+.whyweb7k {
+  background: var(--color-bg-main);
+  color: var(--color-black);
+  padding: 78px 18px;
+  position: relative;
+  overflow: hidden;
+}
+
+.whyweb7k::before {
+  content: "";
+  position: absolute;
+  inset: -120px -120px auto auto;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(34, 223, 178, 0.18), transparent 62%);
+  pointer-events: none;
+}
+
+.whyweb7k__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(280px, 420px) minmax(0, 1fr);
+  gap: 34px;
+  align-items: start;
+}
+
+.whyweb7k__kicker {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.55);
+  margin-bottom: 12px;
+}
+
+.whyweb7k__title {
+  font-family: var(--font-heading);
+  font-size: clamp(28px, 4.4vw, 46px);
+  line-height: 1.08;
+  margin: 0 0 12px;
+}
+
+.whyweb7k__title span {
+  color: var(--color-primary-alt);
+}
+
+.whyweb7k__lead {
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(0, 0, 0, 0.72);
+  margin: 0 0 18px;
+}
+
+/* CTA Sección 2 */
+.whyweb7k__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  padding: 12px 16px;
+  border-radius: 14px;
+  font-family: var(--font-heading);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-black);
+  background: rgba(34, 223, 178, 0.10);
+  border: 1px solid rgba(25, 187, 148, 0.30);
+  transition: all var(--transition-fast);
+}
+
+.whyweb7k__cta:hover {
+  transform: translateY(-2px);
+  background: rgba(34, 223, 178, 0.16);
+  box-shadow: 0 22px 60px rgba(25, 187, 148, 0.14);
+}
+
+.whyweb7k__cards {
+  display: grid;
+  gap: 14px;
+}
+
+.whyweb7k__card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 58px 1fr;
+  gap: 14px;
+  align-items: start;
+  padding: 18px 18px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 18px 55px rgba(15, 23, 42, 0.06);
+  overflow: hidden;
+  transition: all var(--transition-medium);
+}
+
+.whyweb7k__card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 14px;
+  bottom: 14px;
+  width: 4px;
+  border-radius: 999px;
+  background: rgba(25, 187, 148, 0.55);
+}
+
+.whyweb7k__card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(25, 187, 148, 0.30);
+  box-shadow: 0 30px 85px rgba(25, 187, 148, 0.14);
+}
+
+.whyweb7k__icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  transition: all var(--transition-medium);
+}
+
+.whyweb7k__icon i {
+  font-size: 22px;
+  color: rgba(0, 0, 0, 0.78);
+  transition: all var(--transition-medium);
+}
+
+.whyweb7k__card:hover .whyweb7k__icon {
+  transform: translateY(-2px) rotate(-2deg);
+  background: rgba(25, 187, 148, 0.12);
+  border-color: rgba(25, 187, 148, 0.30);
+  box-shadow: 0 18px 45px rgba(34, 223, 178, 0.18);
+}
+
+.whyweb7k__card:hover .whyweb7k__icon i {
+  transform: scale(1.12);
+  color: rgba(0, 0, 0, 0.92);
+}
+
+.whyweb7k__card-title {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  margin: 0 0 6px;
+}
+
+.whyweb7k__text {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: rgba(0, 0, 0, 0.72);
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 1100px) {
+  .offer7k__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 980px) {
+  .whyweb7k__inner {
+    grid-template-columns: 1fr;
+  }
+  .whyweb7k__cards {
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 560px) {
+  .offer7k, .whyweb7k {
+    padding: 46px 14px;
+  }
+  .offer7k__grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .offer7k__lead {
+    font-size: 14px;
+  }
+  .whyweb7k__card {
+    grid-template-columns: 52px 1fr;
+    padding: 16px;
+  }
+  .whyweb7k__title {
+    font-size: 32px;
+  }
+}

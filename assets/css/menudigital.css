@@ -490,3 +490,20 @@
   --mx: 50%;
   --my: 50%;
 }
+
+/* =========================================
+   TEXTO DE IMPACTO (Debajo de las cards)
+   ========================================= */
+
+.offer7k__impact-box {
+  margin-top: 40px; /* Separación de las tarjetas de arriba */
+  margin-bottom: 0; /* Sin margen abajo para pegarlo al siguiente bloque */
+  text-align: center;
+  padding: 0 18px;
+}
+
+.offer7k__impact-box strong {
+  color: var(--color-primary); /* "Impacto común" en verde */
+  font-weight: 700;
+  font-family: var(--font-heading);
+}

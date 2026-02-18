@@ -1392,7 +1392,7 @@ body {
 }
 
 .footer7k__logo {
-  width: 42px; /* 🔥 más grande en escritorio */
+  width: 100px; /* 🔥 más grande en escritorio */
   height: auto;
   display: block;
 }
@@ -1403,13 +1403,13 @@ body {
   flex-wrap: wrap;
   gap: 20px;
   font-size: 13px;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.10em;
   text-transform: uppercase;
   color: rgba(226, 232, 240, 0.88);
 }
 
 .footer7k__services span::before {
-  content: "• ";
+  content: "•";
 }
 
 /* --- Nav --- */
@@ -1512,7 +1512,7 @@ body {
   }
 
   .footer7k__logo {
-    width: 36px;              /* un poco más pequeño en móvil */
+    width: 80px;              /* un poco más pequeño en móvil */
   }
 
   .footer7k__services {

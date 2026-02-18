@@ -100,7 +100,7 @@
   font-family: var(--font-heading);
   font-size: clamp(32px, 4.3vw, 64px);
   line-height: 1.08;
-  font-weight: 600;
+  font-weight: 200;
   margin-bottom: 34px;
   max-width: 640px;
 }
@@ -408,4 +408,40 @@
 .contact7k__loading-text{
   font-weight: 700;
   letter-spacing: .2px;
+}
+
+/* =========================================
+   AJUSTE COLUMNA DERECHA (Texto + Formulario)
+   ========================================= */
+
+/* El contenedor de la derecha se asegura de apilar el texto y la card */
+.contact7k__right-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilos para el texto arriba del formulario */
+.contact7k__text-above-form {
+  color: var(--color-white); /* Texto blanco */
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 500;
+  opacity: 0.9; 
+  margin-bottom: 24px; 
+  max-width: 500px;
+  text-align: center;
+}
+
+/* Ajuste para móviles */
+@media (max-width: 980px) {
+  .contact7k__text-above-form {
+    margin-bottom: 20px;
+    font-size: 15px;
+  }
+}
+
+.contact7k__highlight {
+  color: var(--color-primary-alt);
+  font-weight: 700;
 }
