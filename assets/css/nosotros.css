@@ -338,16 +338,17 @@
   color: rgba(0,0,0,.72);
 }
 
-/* Grid: 3 en 3 en escritorio */
-.team7k__grid{
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+/* Grid: 3 en 3 en escritorio (Cambiado a Flexbox para centrar) */
+.team7k__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 25px;
   margin-top: 26px;
 }
 
-/* Card */
-.team7k__card{
+.team7k__card {
+  width: calc((100% - 50px) / 3); /* NUEVO: 3 tarjetas por fila descontando el gap */
   background: rgba(255,255,255,.85);
   border: 1px solid rgba(0,0,0,.08);
   border-radius: 24px;
@@ -482,7 +483,7 @@
    ========================= */
 
 .team7k__card--ceo {
-  transform: scale(1.07); /* Destaca card un poco más que el resto */
+  transform: scale(1.10); /* Destaca card un poco más que el resto */
   z-index: 1;
   position: relative;
   border-color: rgba(25, 187, 148, 0.55);
@@ -520,14 +521,4 @@
   font-size: 19px;
 }
 
-/* Badge CEO */
-.team7k__card--ceo .team7k__body::before {
-  content: "CEO";
-  display: inline-block;
-  margin-bottom: 8px;
-  font-size: 11px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--color-primary);
-  font-family: var(--font-heading);
-}
+
