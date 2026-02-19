@@ -1,16 +1,27 @@
 const toggle = document.getElementById("menu-toggle");
 const mobileMenu = document.getElementById("mobile-menu");
+const header = document.getElementById("header");
 
+// Toggle mobile
 toggle.addEventListener("click", () => {
     mobileMenu.classList.toggle("active");
 
-    // Cambia el ícono de hamburguesa a X
     if (mobileMenu.classList.contains("active")) {
         toggle.innerHTML = `<i class="ri-close-line"></i>`;
     } else {
         toggle.innerHTML = `<i class="ri-menu-line"></i>`;
     }
 });
+
+// 🔥 Efecto al hacer scroll
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+});
+
 
 // LOADER 7K DIGITAL
 window.addEventListener("load", () => {
