@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
       clearInterval(timer);
       if (elSeconds) elSeconds.textContent = "0";
       if (elBar) elBar.style.width = "100%";
-      window.location.href = "index.html";
+      window.location.href = "/";
       return;
     }
     updateUI();
