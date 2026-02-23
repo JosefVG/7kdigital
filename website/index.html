@@ -1,5 +1,4 @@
-  
-  <!-- AHORA eMENU -->
+<!-- AHORA eMENU -->
 
 <!DOCTYPE html>
 <html lang="es">
@@ -133,6 +132,52 @@
             <a href="mailto:info@7kdigital.com">contacto@7kdigital.com</a>
         </nav>
     </header>
+
+<!-- ============================= -->
+<!-- SECCIÓN VIDEO eMENU 7K DIGITAL -->
+<!-- ============================= -->
+
+<section class="emenu-section">
+
+  <div class="emenu-container">
+
+    <!-- Texto superior -->
+    <span class="emenu-tag">INNOVACIÓN DIGITAL</span>
+
+    <!-- Título -->
+    <h2 class="emenu-title">
+      Conoce <span>eMENU</span>
+    </h2>
+
+    <!-- Descripción -->
+    <p class="emenu-description">
+      La nueva experiencia digital para restaurantes que transforma menús tradicionales 
+      en experiencias interactivas, dinámicas y medibles.
+    </p>
+
+    <!-- Video -->
+    <div class="emenu-video-wrapper">
+
+      <video id="emenuVideo"
+             class="emenu-video"
+             autoplay
+             muted
+             loop
+             playsinline>
+        <source src="#" type="video/mp4">
+        Tu navegador no soporta video HTML5.
+      </video>
+
+      <!-- Botón sonido -->
+      <button id="soundToggle" class="sound-toggle">
+        🔇 Activar sonido
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
 
 <section class="offer7k" id="oferta-web">
   <div class="offer7k__inner">
@@ -363,7 +408,7 @@
         <a href="/politica/">Política de cookies</a>
       </div>
       <p class="footer7k__copy">
-        © 2025 7K Digital. Todos los derechos reservados.
+        ©️ 2025 7K Digital. Todos los derechos reservados.
       </p>
     </div>
   </div>
@@ -393,6 +438,21 @@
       card.style.setProperty('--mx', x + '%');
       card.style.setProperty('--my', y + '%');
     });
+  });
+</script>
+
+<script>
+  const video = document.getElementById("emenuVideo");
+  const soundBtn = document.getElementById("soundToggle");
+
+  soundBtn.addEventListener("click", () => {
+    if (video.muted) {
+      video.muted = false;
+      soundBtn.textContent = "🔊 Silenciar";
+    } else {
+      video.muted = true;
+      soundBtn.textContent = "🔇 Activar sonido";
+    }
   });
 </script>
 
