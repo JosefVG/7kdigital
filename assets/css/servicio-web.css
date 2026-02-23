@@ -187,25 +187,17 @@
 /* Textos */
 .offer7k__card-title {
   font-family: var(--font-heading);
-  font-size: 15px;
+  font-size: 17px;
   margin: 0 0 8px;
 }
 
 .offer7k__text {
   margin: 0;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.65;
   color: rgba(0, 0, 0, 0.72);
 }
 
-/* estilo de texto card confianza y profesionalismo (impacto comun) */
-
-.offer7k__highlight {
-  display: inline-block;
-  font-size: 12px;
-  color: var(--color-black);
-  font-style: italic;
-}
 
 /* ===== Responsive ===== */
 @media (max-width: 1100px) {
@@ -399,13 +391,13 @@
 
 .whyweb7k__card-title {
   font-family: var(--font-heading);
-  font-size: 16px;
+  font-size: 17px;
   margin: 0 0 6px;
 }
 
 .whyweb7k__text {
   margin: 0;
-  font-size: 13.5px;
+  font-size: 15px;
   line-height: 1.65;
   color: rgba(0, 0, 0, 0.72);
 }
@@ -446,6 +438,7 @@
   margin-bottom: 0; /* Sin margen abajo para pegarlo al siguiente bloque */
   text-align: center;
   padding: 0 18px;
+  font-size: 18px;
 }
 
 .offer7k__impact-box strong {

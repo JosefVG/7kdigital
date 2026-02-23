@@ -132,6 +132,32 @@
         </nav>
     </header>
 
+    <!--banner de video-->
+    <section class="emenu-section">
+  <div class="emenu-container">
+    <span class="emenu-tag">TRÁFICO CON ESTRATEGIA</span>
+
+    <h2 class="emenu-title">
+      Conoce nuestras <span>Campañas de Ads</span>
+    </h2>
+
+    <p class="emenu-description">
+      Dejamos las métricas de vanidad a un lado. Diseñamos campañas de publicidad enfocadas en atraer clientes reales a tu restaurante, no solo "likes".
+    </p>
+
+    <div class="emenu-video-wrapper">
+      <video id="emenuVideo" class="emenu-video" autoplay muted loop playsinline>
+        <source src="#" type="video/mp4">
+        Tu navegador no soporta video HTML5.
+      </video>
+      <button id="soundToggle" class="sound-toggle">
+        🔇 Activar sonido
+      </button>
+    </div>
+  </div>
+</section>
+
+
 <!-- =========================
      SECTION: Oferta Campañas (7K)
      ========================= -->
@@ -306,6 +332,25 @@
   });
 </script>
 
+
+
+<script>
+  // Script para controlar el sonido del video
+  const video = document.getElementById("emenuVideo");
+  const soundBtn = document.getElementById("soundToggle");
+
+  if(soundBtn && video) {
+    soundBtn.addEventListener("click", () => {
+      if (video.muted) {
+        video.muted = false;
+        soundBtn.textContent = "🔊 Silenciar";
+      } else {
+        video.muted = true;
+        soundBtn.textContent = "🔇 Activar sonido";
+      }
+    });
+  }
+</script>
 
 </body>
 </html>

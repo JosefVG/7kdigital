@@ -4,7 +4,7 @@
   <!-- Configuración básica -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CRM | 7K Digital</title>
+  <title>Programa de lealtad | 7K Digital</title>
 
   <!-- SEO básico -->
   <meta
@@ -131,6 +131,33 @@
             <a href="mailto:info@7kdigital.com">contacto@7kdigital.com</a>
         </nav>
     </header>
+
+
+    <!--Banner del video-->
+    <section class="emenu-section">
+  <div class="emenu-container">
+    <span class="emenu-tag">FIDELIZACIÓN DIGITAL</span>
+
+    <h2 class="emenu-title">
+      Conoce nuestro <span>CRM y Lealtad</span>
+    </h2>
+
+    <p class="emenu-description">
+      Convierte visitantes ocasionales en clientes frecuentes. Un sistema automatizado para capturar datos, enviar promociones y premiar la preferencia de tus comensales.
+    </p>
+
+    <div class="emenu-video-wrapper">
+      <video id="emenuVideo" class="emenu-video" autoplay muted loop playsinline>
+        <source src="#" type="video/mp4">
+        Tu navegador no soporta video HTML5.
+      </video>
+      <button id="soundToggle" class="sound-toggle">
+        🔇 Activar sonido
+      </button>
+    </div>
+  </div>
+</section>
+
 
 <!-- =========================
      SECTION: Oferta CRM + GMB (7K)
@@ -302,6 +329,24 @@
       card.style.setProperty('--my', y + '%');
     });
   });
+</script>
+
+<script>
+  // Script para controlar el sonido del video
+  const video = document.getElementById("emenuVideo");
+  const soundBtn = document.getElementById("soundToggle");
+
+  if(soundBtn && video) {
+    soundBtn.addEventListener("click", () => {
+      if (video.muted) {
+        video.muted = false;
+        soundBtn.textContent = "🔊 Silenciar";
+      } else {
+        video.muted = true;
+        soundBtn.textContent = "🔇 Activar sonido";
+      }
+    });
+  }
 </script>
 
 

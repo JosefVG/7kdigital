@@ -132,6 +132,33 @@
         </nav>
     </header>
 
+    <!--Banner del video-->
+    <section class="emenu-section">
+  <div class="emenu-container">
+    <span class="emenu-tag">INNOVACIÓN GASTRONÓMICA</span>
+
+    <h2 class="emenu-title">
+      Conoce nuestro <span>Menú Digital</span>
+    </h2>
+
+    <p class="emenu-description">
+      Transforma la manera en que tus clientes ordenan. Un menú interactivo, visual y diseñado para aumentar tu ticket promedio y agilizar tu servicio.
+    </p>
+
+    <div class="emenu-video-wrapper">
+      <video id="emenuVideo" class="emenu-video" autoplay muted loop playsinline>
+        <source src="#" type="video/mp4">
+        Tu navegador no soporta video HTML5.
+      </video>
+      <button id="soundToggle" class="sound-toggle">
+        🔇 Activar sonido
+      </button>
+    </div>
+  </div>
+</section>
+
+
+
 <section class="offer7k offer7k--menus" id="menus-digitales">
   <div class="offer7k__inner">
 
@@ -355,6 +382,21 @@
   });
 </script>
 
+
+<script>
+  const video = document.getElementById("emenuVideo");
+  const soundBtn = document.getElementById("soundToggle");
+
+  soundBtn.addEventListener("click", () => {
+    if (video.muted) {
+      video.muted = false;
+      soundBtn.textContent = "🔊 Silenciar";
+    } else {
+      video.muted = true;
+      soundBtn.textContent = "🔇 Activar sonido";
+    }
+  });
+</script>
 
 </body>
 </html>
