@@ -9,24 +9,32 @@
    =========================== */
 :root {
   /* Colores principales */
-  --color-primary: #19BB94;      /* Verde principal */
-  --color-primary-alt: #22DFB2;  /* Variante */
-  --color-accent: #00FFCC;       /* Acento brillante */
-  --color-accent-soft: #79F1D5;  /* Acento suave */
+  --color-primary: #19BB94;
+  /* Verde principal */
+  --color-primary-alt: #22DFB2;
+  /* Variante */
+  --color-accent: #00FFCC;
+  /* Acento brillante */
+  --color-accent-soft: #79F1D5;
+  /* Acento suave */
 
   /* Neutros */
   --color-black: #000000;
   --color-white: #FFFFFF;
-  --color-bg-main: #FAFAFA;      /* fondo general suave */
-  --color-bg-header: #FAFAFA;    /* fondo header */
-  --color-bg-hover: #F5F5F5;     /* hover suave */
+  --color-bg-main: #FAFAFA;
+  /* fondo general suave */
+  --color-bg-header: #FAFAFA;
+  /* fondo header */
+  --color-bg-hover: #F5F5F5;
+  /* hover suave */
   --color-border-soft: #E0E0E0;
   --color-border-subtle: #CCCCCC;
   --color-border-item: #EEEEEE;
 
   /* Tipografías (asegúrate de importarlas en el HTML o CSS) */
   --font-heading: "Raleway", serif;
-  --font-heading-secundary: "Baskervville", serif; ; 
+  --font-heading-secundary: "Baskervville", serif;
+  ;
   --font-body: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --font-script: "Rhode White", "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 
@@ -37,48 +45,55 @@
 }
 
 
-/* ====== SECTION SERVICES 7K (estilo como referencia) ====== */
-.services7k{
-  background: #000;
-  color: #fff;
+/* ====== SECTION SERVICES 7K (estilo claro) ====== */
+.services7k {
+  background: var(--color-bg-main);
+  /* Cambiado a fondo claro */
+  color: var(--color-black);
+  /* Cambiado a texto oscuro */
   padding: 90px 18px 80px;
 }
 
-.services7k__inner{
+.services7k__inner {
   max-width: 1400px;
   margin: 0 auto;
 }
 
-.services7k__head{
+.services7k__head {
   text-align: center;
   margin-bottom: 34px;
 }
 
-.services7k__title{
+.services7k__title {
   font-family: var(--font-heading);
   font-weight: 600;
-  font-size: clamp(52px, 8vw, 120px);
+  font-size: clamp(56px, 8vw, 124px);
   line-height: 0.95;
   letter-spacing: -0.02em;
   margin: 0;
+  color: var(--color-black);
+  /* Aseguramos que sea negro */
 }
 
-.services7k__title span{
+.services7k__title span {
   display: block;
-  color: var(--color-primary-alt);
+  color: var(--color-primary);
+  /* Cambiado al verde principal para mejor contraste en blanco */
   font-weight: 700;
 }
 
-.services7k__lead{
+.services7k__lead {
   margin: 16px auto 0;
   max-width: 780px;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.7;
-  color: rgba(255,255,255,0.65);
+  color: var(--color-black);
+  /* Cambiado a negro sólido */
 }
 
 .services7k__gallery-title span {
-  color: var(--color-primary-alt); 
+  color: var(--color-primary);
+  /* Mejor contraste en blanco */
 }
 
 /* =========================================
@@ -88,7 +103,7 @@
 /* 1. Contenedor Principal (Grid) */
 .services7k__grid {
   display: grid;
-  /*  tres columnas de igual tamaño */
+  /* tres columnas de igual tamaño */
   grid-template-columns: repeat(3, 1fr);
   /* Espacio entre tarjetas */
   gap: 30px;
@@ -98,19 +113,21 @@
 
 /* 2. La Tarjeta Individual */
 .services7k__card {
-  background-color: #0a0a0a;
+  background-color: var(--color-white);
+  /* Fondo blanco en tarjetas */
   border-radius: 24px;
   padding: 32px;
-  
+
   /* Flexbox para organizar el contenido verticalmente */
   display: flex;
   flex-direction: column;
-  
-  /* Borde sutil y el efecto de resplandor interno (verde 7K) */
-  border: 1px solid rgba(25, 187, 148, 0.15);
-  box-shadow: inset 0 0 30px rgba(25, 187, 148, 0.05);
-  
-  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+  /* Borde sutil y sombra suave adaptada al modo claro */
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 18px 55px rgba(15, 23, 42, 0.06);
+
+  transition: transform var(--transition-medium), box-shadow var(--transition-medium),
+    border-color var(--transition-medium), background var(--transition-medium);
   position: relative;
   overflow: hidden;
   border-bottom: none;
@@ -120,12 +137,10 @@
 .services7k__card:hover {
   /* Se levanta ligeramente */
   transform: translateY(-7px);
-  /* El borde se vuelve más brillante */
-  border-color: rgba(25, 187, 148, 0.5);
-  /* El resplandor interno se intensifica y añade sombra externa */
-  box-shadow: 
-    inset 0 0 50px rgba(25, 187, 148, 0.15),
-    0 20px 40px -10px rgba(25, 187, 148, 0.3);
+  /* El borde se vuelve más verde */
+  border-color: rgba(25, 187, 148, 0.35);
+  /* La sombra se intensifica al estilo de tus otras secciones */
+  box-shadow: 0 30px 85px rgba(25, 187, 148, 0.14);
 }
 
 /* 3. Cabecera de la tarjeta (Icono + Título) */
@@ -133,33 +148,45 @@
   margin-bottom: 20px;
 }
 
-/* Caja del Icono con resplandor */
+/* Caja del Icono con fondo sutil */
 .services7k__icon-box {
   width: 64px;
   height: 64px;
-  /* Un degradado sutil de verde a transparente */
-  background: linear-gradient(145deg, rgba(25,187,148,0.2), rgba(0,0,0,0));
+  background: rgba(25, 187, 148, 0.08);
+  /* Fondo verde suavecito */
   border-radius: 16px;
   display: grid;
   place-items: center;
   margin-bottom: 20px;
-  border: 1px solid rgba(25, 187, 148, 0.3);
-  /* Resplandor interno específico para la caja del icono */
-  box-shadow: inset 0 0 15px rgba(25, 187, 148, 0.15);
+  border: 1px solid rgba(25, 187, 148, 0.15);
+  transition: all var(--transition-medium);
 }
 
 .services7k__icon-box i {
   font-size: 28px;
-  /* Usamos el verde alternativo más brillante para el icono */
-  color: var(--color-primary-alt);
+  color: var(--color-primary);
+  /* Verde 7K principal */
+  transition: all var(--transition-medium);
+}
+
+.services7k__card:hover .services7k__icon-box {
+  background: rgba(25, 187, 148, 0.15);
+  transform: translateY(-2px) rotate(-2deg);
+}
+
+.services7k__card:hover .services7k__icon-box i {
+  transform: scale(1.1);
+  color: var(--color-black);
+  /* Cambia a negro al hacer hover en la tarjeta */
 }
 
 /* Título del servicio */
 .services7k__name {
   font-family: var(--font-heading);
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 600;
-  color: var(--color-white);
+  color: var(--color-black);
+  /* Cambiado a negro */
   margin: 0;
   line-height: 1.2;
 }
@@ -168,9 +195,10 @@
 .services7k__desc {
   margin: 0;
   margin-bottom: 30px;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--color-black);
+  /* Cambiado a negro sólido */
   flex-grow: 1;
 }
 
@@ -184,28 +212,32 @@
 .services7k__btn-card {
   width: 100%;
   display: flex;
-  justify-content: space-between; /* Texto a la izq, flecha a la derecha */
+  justify-content: space-between;
+  /* Texto a la izq, flecha a la derecha */
   align-items: center;
-  
+
   padding: 16px 24px;
   border-radius: 12px;
   text-decoration: none;
-  
-  /* Fondo oscuro con un toque de verde */
+
+  /* Fondo muy sutil con verde */
   background: rgba(25, 187, 148, 0.08);
   border: 1px solid rgba(25, 187, 148, 0.25);
-  
-  color: var(--color-primary-alt);
-  font-size: 14px;
-  font-weight: 600;
+
+  color: var(--color-black);
+  /* Letras negras para leer bien en claro */
+  font-size: 16px;
+  font-weight: 700;
   letter-spacing: 0.05em;
-  
+
   transition: all 0.3s ease;
 }
 
 .services7k__btn-card i {
-  font-size: 18px;
-  transition: transform 0.3s ease;
+  font-size: 20px;
+  color: var(--color-primary);
+  /* Flecha verde */
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 /* Hover del botón */
@@ -216,8 +248,9 @@
 }
 
 .services7k__btn-card:hover i {
-  /* La flecha se mueve a la derecha */
+  /* La flecha se mueve a la derecha y cambia a negro */
   transform: translateX(6px);
+  color: var(--color-black);
 }
 
 
@@ -231,73 +264,75 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
   }
+
   .services7k__name {
-     font-size: 22px;
+    font-size: 24px;
   }
 }
 
 /* Móviles (Menos de 600px): 1 columna */
 @media (max-width: 600px) {
   .services7k__grid {
-    grid-template-columns: 1fr; /* Una sola columna */
+    grid-template-columns: 1fr;
+    /* Una sola columna */
     gap: 24px;
     margin-top: 30px;
   }
-  
+
   .services7k__card {
     padding: 24px;
   }
-  
+
   .services7k__icon-box {
     width: 54px;
     height: 54px;
   }
-  
+
   .services7k__icon-box i {
     font-size: 24px;
   }
 }
 
 /* Responsive */
-@media (max-width: 900px){
-  .services7k{
+@media (max-width: 900px) {
+  .services7k {
     padding: 60px 14px 56px;
   }
 
-  .services7k__toggle{
+  .services7k__toggle {
     grid-template-columns: 58px 1fr;
     gap: 14px;
     padding: 18px 0;
   }
 
-  .services7k__icon{
+  .services7k__icon {
     width: 44px;
     height: 44px;
   }
 
-  .services7k__panel-inner{
+  .services7k__panel-inner {
     padding-left: 72px;
   }
 }
 
-@media (max-width: 520px){
-  .services7k__head{
+@media (max-width: 520px) {
+  .services7k__head {
     text-align: left;
   }
 
-  .services7k__title{
-    font-size: 54px;
+  .services7k__title {
+    font-size: 58px;
   }
 
-  .services7k__title span{
-    font-size: 46px;
+  .services7k__title span {
+    font-size: 50px;
   }
 
-  .services7k__panel-inner{
+  .services7k__panel-inner {
     padding-left: 0;
   }
 
-  .services7k__toggle{
+  .services7k__toggle {
     grid-template-columns: 52px 1fr;
   }
 }
@@ -307,15 +342,17 @@
    ========================================= */
 
 .services7k__gallery-wrapper {
-  margin-top: 80px; 
-  margin-bottom: 60px; /* Espacio antes del footer */
+  margin-top: 80px;
+  margin-bottom: 60px;
+  /* Espacio antes del footer */
   text-align: center;
 }
 
 .services7k__gallery-title {
   font-family: var(--font-heading);
-  font-size: clamp(32px, 5vw, 48px);
-  color: var(--color-white);
+  font-size: clamp(36px, 5vw, 52px);
+  color: var(--color-black);
+  /* Cambiado a negro sólido */
   margin-bottom: 40px;
   font-weight: 600;
 }
@@ -323,8 +360,10 @@
 /* GRIDS PARA IMAGENES */
 .services7k__gallery-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 por fila */
-  gap: 24px; /* Espacio entre fotos */
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 por fila */
+  gap: 24px;
+  /* Espacio entre fotos */
 }
 
 /* CONTENEDOR DE LA IMAGEN (Invisible ahora) */
@@ -335,7 +374,8 @@
   border: none;
   box-shadow: none;
   overflow: hidden;
-  border-radius: 20px; /* Redondeo directo a la forma de la imagen */
+  border-radius: 20px;
+  /* Redondeo directo a la forma de la imagen */
   cursor: pointer;
 }
 
@@ -343,15 +383,17 @@
 .services7k__gallery-card img {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
+  object-fit: cover;
   display: block;
   transition: transform 0.5s ease, filter 0.3s ease;
 }
 
 /* EFECTO*/
 .services7k__gallery-card:hover img {
-  transform: scale(1.03); /* Zoom  suave */
-  filter: brightness(1.1); /* Se ilumina al pasar el mouse */
+  transform: scale(1.03);
+  /* Zoom  suave */
+  filter: brightness(1.1);
+  /* Se ilumina al pasar el mouse */
 }
 
 
@@ -360,18 +402,21 @@
    ========================================= */
 @media (max-width: 1024px) {
   .services7k__gallery-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablet */
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columnas en tablet */
   }
 }
 
 @media (max-width: 600px) {
   .services7k__gallery-grid {
-    grid-template-columns: 1fr; /* 1 columna en celular */
+    grid-template-columns: 1fr;
+    /* 1 columna en celular */
   }
-  
+
   .services7k__gallery-title {
-    text-align: left; /* Título alineado a la izq en móvil */
-    font-size: 32px;
+    text-align: left;
+    /* Título alineado a la izq en móvil */
+    font-size: 36px;
   }
 }
 
@@ -381,17 +426,19 @@
 
 /* El fondo oscuro que cubre toda la pantalla */
 .modal-lightbox {
-  display: none; 
-  position: fixed; 
-  z-index: 10000; /* Para que quede encima de TODO */
-  padding-top: 50px; 
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  /* Para que quede encima de TODO */
+  padding-top: 50px;
   left: 0;
   top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgba(0, 0, 0, 0.901); /* Fondo negro casi opaco */
-  
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(232, 232, 232, 0.901);
+  /* Fondo negro casi opaco - Este sí se queda oscuro para la imagen modal */
+
   /* Centrar la imagen vertical y horizontalmente */
   align-items: center;
   justify-content: center;
@@ -401,10 +448,13 @@
 .modal-content {
   margin: auto;
   display: block;
-  max-width: 90%; /* Que no se salga del ancho */
-  max-height: 90vh; /* Que no se salga del alto */
+  max-width: 90%;
+  /* Que no se salga del ancho */
+  max-height: 90vh;
+  /* Que no se salga del alto */
   border-radius: 8px;
-  animation: zoomIn 0.3s; /* Animación de entrada */
+  animation: zoomIn 0.3s;
+  /* Animación de entrada */
 }
 
 /* Botón de cerrar (x) */
@@ -412,7 +462,7 @@
   position: absolute;
   top: 20px;
   right: 35px;
-  color: #f1f1f1;
+  color: #000000;
   font-size: 40px;
   font-weight: bold;
   transition: 0.3s;
@@ -422,19 +472,25 @@
 
 .close-modal:hover,
 .close-modal:focus {
-  color: var(--color-primary); /* Se pone verde al pasar el mouse */
+  color: var(--color-primary);
+  /* Se pone verde al pasar el mouse */
   text-decoration: none;
   cursor: pointer;
 }
 
 /* Animación de zoom simple */
 @keyframes zoomIn {
-  from {transform:scale(0)} 
-  to {transform:scale(1)}
+  from {
+    transform: scale(0)
+  }
+
+  to {
+    transform: scale(1)
+  }
 }
 
 /* Ajuste para móviles */
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 700px) {
   .modal-content {
     width: 100%;
   }

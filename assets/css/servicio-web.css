@@ -9,24 +9,32 @@
    =========================== */
 :root {
   /* Colores principales */
-  --color-primary: #19BB94;      /* Verde principal */
-  --color-primary-alt: #22DFB2;  /* Variante */
-  --color-accent: #00FFCC;       /* Acento brillante */
-  --color-accent-soft: #79F1D5;  /* Acento suave */
+  --color-primary: #19BB94;
+  /* Verde principal */
+  --color-primary-alt: #22DFB2;
+  /* Variante */
+  --color-accent: #00FFCC;
+  /* Acento brillante */
+  --color-accent-soft: #79F1D5;
+  /* Acento suave */
 
   /* Neutros */
   --color-black: #000000;
   --color-white: #FFFFFF;
-  --color-bg-main: #FAFAFA;      /* fondo general suave */
-  --color-bg-header: #FAFAFA;    /* fondo header */
-  --color-bg-hover: #F5F5F5;     /* hover suave */
+  --color-bg-main: #FAFAFA;
+  /* fondo general suave */
+  --color-bg-header: #FAFAFA;
+  /* fondo header */
+  --color-bg-hover: #F5F5F5;
+  /* hover suave */
   --color-border-soft: #E0E0E0;
   --color-border-subtle: #CCCCCC;
   --color-border-item: #EEEEEE;
 
   /* Tipografías (asegúrate de importarlas en el HTML o CSS) */
   --font-heading: "Raleway", serif;
-  --font-heading-secundary: "Baskervville", serif; ; 
+  --font-heading-secundary: "Baskervville", serif;
+  ;
   --font-body: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --font-script: "Rhode White", "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 
@@ -58,15 +66,18 @@
 .offer7k__kicker {
   display: inline-block;
   font-family: var(--font-heading);
-  font-size: 29px;
+  font-size: 32px;
+  /* Aumentado de 29px */
   letter-spacing: 0.22em;
-  color: rgba(0, 0, 0, 0.55);
+  color: var(--color-black);
+  /* Cambiado de rgba gris a negro sólido */
   margin-bottom: 10px;
 }
 
 .offer7k__title {
   font-family: var(--font-heading);
-  font-size: clamp(24px, 4.6vw, 40px);
+  font-size: clamp(28px, 5vw, 44px);
+  /* Aumentado de 24/40px */
   line-height: 1.1;
   margin: 0 0 12px;
 }
@@ -74,9 +85,11 @@
 .offer7k__lead {
   max-width: 760px;
   margin: 0 auto 18px;
-  font-size: 18px;
+  font-size: 20px;
+  /* Aumentado de 18px */
   line-height: 1.7;
-  color: rgba(0, 0, 0, 0.72);
+  color: var(--color-black);
+  /* Cambiado de rgba gris a negro sólido */
 }
 
 /* CTA centrado */
@@ -86,10 +99,12 @@
   gap: 8px;
   text-decoration: none;
   font-family: var(--font-heading);
-  font-size: 13px;
+  font-size: 15px;
+  /* Aumentado de 13px */
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding: 12px 18px;
+  padding: 14px 22px;
+  /* Ajustado el padding */
   border-radius: 999px;
   border: 1px solid rgba(0, 0, 0, 0.14);
   color: var(--color-black);
@@ -116,7 +131,8 @@
 /* Cards */
 .offer7k__card {
   position: relative;
-  padding: 18px 16px 16px;
+  padding: 20px 18px 18px;
+  /* Ligeramente más grande */
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.75);
   border: 1px solid rgba(0, 0, 0, 0.08);
@@ -131,11 +147,9 @@
   content: "";
   position: absolute;
   inset: -2px;
-  background: radial-gradient(
-    600px circle at var(--mx, 50%) var(--my, 50%),
-    rgba(34, 223, 178, 0.22),
-    transparent 55%
-  );
+  background: radial-gradient(600px circle at var(--mx, 50%) var(--my, 50%),
+      rgba(34, 223, 178, 0.22),
+      transparent 55%);
   opacity: 0;
   transition: opacity var(--transition-medium);
   pointer-events: none;
@@ -154,12 +168,13 @@
 
 /* Icono con hover pro */
 .offer7k__icon {
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  /* Aumentado de 44px */
+  height: 48px;
   border-radius: 14px;
   display: grid;
   place-items: center;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   background: rgba(0, 0, 0, 0.04);
   border: 1px solid rgba(0, 0, 0, 0.08);
   transition: transform var(--transition-medium), background var(--transition-medium),
@@ -167,8 +182,10 @@
 }
 
 .offer7k__icon i {
-  font-size: 22px;
-  color: rgba(0, 0, 0, 0.75);
+  font-size: 24px;
+  /* Aumentado de 22px */
+  color: var(--color-black);
+  /* Cambiado a negro sólido */
   transition: transform var(--transition-medium), color var(--transition-medium);
 }
 
@@ -181,21 +198,24 @@
 
 .offer7k__card:hover .offer7k__icon i {
   transform: scale(1.12);
-  color: rgba(0, 0, 0, 0.9);
+  color: var(--color-black);
 }
 
 /* Textos */
 .offer7k__card-title {
   font-family: var(--font-heading);
-  font-size: 17px;
+  font-size: 19px;
+  /* Aumentado de 17px */
   margin: 0 0 8px;
 }
 
 .offer7k__text {
   margin: 0;
-  font-size: 15px;
+  font-size: 17px;
+  /* Aumentado de 15px */
   line-height: 1.65;
-  color: rgba(0, 0, 0, 0.72);
+  color: var(--color-black);
+  /* Cambiado a negro sólido */
 }
 
 
@@ -213,11 +233,13 @@
 
   .offer7k__grid {
     grid-template-columns: 1fr;
-    gap: 14px;
+    gap: 16px;
+    /* Aumentado de 14px */
   }
 
   .offer7k__lead {
-    font-size: 14px;
+    font-size: 16px;
+    /* Aumentado de 14px */
   }
 }
 
@@ -248,11 +270,9 @@
   inset: -120px -120px auto auto;
   width: 420px;
   height: 420px;
-  background: radial-gradient(
-    circle,
-    rgba(34, 223, 178, 0.18),
-    transparent 62%
-  );
+  background: radial-gradient(circle,
+      rgba(34, 223, 178, 0.18),
+      transparent 62%);
   pointer-events: none;
 }
 
@@ -268,16 +288,19 @@
 .whyweb7k__kicker {
   display: inline-block;
   font-family: var(--font-heading);
-  font-size: 12px;
+  font-size: 14px;
+  /* Aumentado de 12px */
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.55);
+  color: var(--color-black);
+  /* Cambiado a negro sólido */
   margin-bottom: 12px;
 }
 
 .whyweb7k__title {
   font-family: var(--font-heading);
-  font-size: clamp(28px, 4.4vw, 46px);
+  font-size: clamp(32px, 5vw, 50px);
+  /* Aumentado de 28/46px */
   line-height: 1.08;
   margin: 0 0 12px;
 }
@@ -287,9 +310,11 @@
 }
 
 .whyweb7k__lead {
-  font-size: 15px;
+  font-size: 18px;
+  /* Aumentado de 15px */
   line-height: 1.7;
-  color: rgba(0, 0, 0, 0.72);
+  color: var(--color-black);
+  /* Cambiado a negro sólido */
   margin: 0 0 18px;
 }
 
@@ -299,10 +324,12 @@
   align-items: center;
   gap: 10px;
   text-decoration: none;
-  padding: 12px 16px;
+  padding: 14px 20px;
+  /* Ajustado el padding */
   border-radius: 14px;
   font-family: var(--font-heading);
-  font-size: 13px;
+  font-size: 15px;
+  /* Aumentado de 13px */
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-black);
@@ -321,7 +348,8 @@
 /* Cards column */
 .whyweb7k__cards {
   display: grid;
-  gap: 14px;
+  gap: 16px;
+  /* Aumentado de 14px */
 }
 
 /* Card diferente: barra lateral + glow suave */
@@ -331,7 +359,8 @@
   grid-template-columns: 58px 1fr;
   gap: 14px;
   align-items: start;
-  padding: 18px 18px;
+  padding: 20px 20px;
+  /* Ligeramente más grande */
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.78);
   border: 1px solid rgba(0, 0, 0, 0.08);
@@ -360,8 +389,9 @@
 }
 
 .whyweb7k__icon {
-  width: 46px;
-  height: 46px;
+  width: 48px;
+  /* Aumentado de 46px */
+  height: 48px;
   border-radius: 16px;
   display: grid;
   place-items: center;
@@ -372,8 +402,10 @@
 }
 
 .whyweb7k__icon i {
-  font-size: 22px;
-  color: rgba(0, 0, 0, 0.78);
+  font-size: 24px;
+  /* Aumentado de 22px */
+  color: var(--color-black);
+  /* Cambiado a negro sólido */
   transition: transform var(--transition-medium), color var(--transition-medium);
 }
 
@@ -386,20 +418,23 @@
 
 .whyweb7k__card:hover .whyweb7k__icon i {
   transform: scale(1.12);
-  color: rgba(0, 0, 0, 0.92);
+  color: var(--color-black);
 }
 
 .whyweb7k__card-title {
   font-family: var(--font-heading);
-  font-size: 17px;
+  font-size: 19px;
+  /* Aumentado de 17px */
   margin: 0 0 6px;
 }
 
 .whyweb7k__text {
   margin: 0;
-  font-size: 15px;
+  font-size: 17px;
+  /* Aumentado de 15px */
   line-height: 1.65;
-  color: rgba(0, 0, 0, 0.72);
+  color: var(--color-black);
+  /* Cambiado a negro sólido */
 }
 
 /* ===== Responsive ===== */
@@ -425,7 +460,8 @@
   }
 
   .whyweb7k__title {
-    font-size: 32px;
+    font-size: 34px;
+    /* Aumentado de 32px */
   }
 }
 
@@ -434,15 +470,19 @@
    ========================================= */
 
 .offer7k__impact-box {
-  margin-top: 40px; /* Separación de las tarjetas de arriba */
-  margin-bottom: 0; /* Sin margen abajo para pegarlo al siguiente bloque */
+  margin-top: 40px;
+  /* Separación de las tarjetas de arriba */
+  margin-bottom: 0;
+  /* Sin margen abajo para pegarlo al siguiente bloque */
   text-align: center;
   padding: 0 18px;
-  font-size: 18px;
+  font-size: 20px;
+  /* Aumentado de 18px */
 }
 
 .offer7k__impact-box strong {
-  color: var(--color-primary); /* "Impacto común" en verde */
+  color: var(--color-primary);
+  /* "Impacto común" en verde */
   font-weight: 700;
   font-family: var(--font-heading);
 }
@@ -466,7 +506,8 @@
 .emenu-tag {
   display: inline-block;
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 16px;
+  /* Aumentado de 14px */
   letter-spacing: 2px;
   color: var(--color-primary);
   margin-bottom: 15px;
@@ -475,7 +516,8 @@
 
 .emenu-title {
   font-family: var(--font-heading);
-  font-size: 48px;
+  font-size: 52px;
+  /* Aumentado de 48px */
   font-weight: 700;
   margin-bottom: 20px;
   color: var(--color-black);
@@ -487,10 +529,12 @@
 
 .emenu-description {
   font-family: var(--font-body);
-  font-size: 18px;
+  font-size: 20px;
+  /* Aumentado de 18px */
   max-width: 700px;
   margin: 0 auto 50px auto;
-  color: #555;
+  color: var(--color-black);
+  /* Cambiado de #555 a negro sólido */
   line-height: 1.6;
 }
 
@@ -518,9 +562,11 @@
   background: var(--color-primary);
   color: var(--color-white);
   border: none;
-  padding: 12px 18px;
+  padding: 14px 22px;
+  /* Aumentado el padding */
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 15px;
+  /* Aumentado de 14px */
   cursor: pointer;
   border-radius: 50px;
   transition: var(--transition-fast);
@@ -536,11 +582,13 @@
 
 @media (max-width: 992px) {
   .emenu-title {
-    font-size: 38px;
+    font-size: 42px;
+    /* Aumentado de 38px */
   }
 
   .emenu-description {
-    font-size: 16px;
+    font-size: 18px;
+    /* Aumentado de 16px */
   }
 }
 
@@ -550,13 +598,47 @@
   }
 
   .emenu-title {
-    font-size: 28px;
+    font-size: 32px;
+    /* Aumentado de 28px */
   }
 
   .sound-toggle {
     bottom: 15px;
     right: 15px;
-    padding: 10px 14px;
-    font-size: 13px;
+    padding: 12px 18px;
+    font-size: 14px;
+    /* Aumentado de 13px */
+  }
+}
+
+/* =========================================
+   IMAGEN SHOWCASE (Mockup eMenu)
+   ========================================= */
+.offer7k__showcase {
+  text-align: center;
+  margin: 40px auto 50px;
+  /* 40px de espacio arriba, centrado, y 50px de espacio hacia las cards abajo */
+  max-width: 850px;
+  /* Controla qué tan grande se hace en PC */
+  padding: 0 15px;
+}
+
+.offer7k__showcase img {
+  width: 60%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  transition: transform var(--transition-medium);
+}
+
+/* Efecto muy sutil al pasar el mouse */
+.offer7k__showcase img:hover {
+  transform: translateY(-4px);
+}
+
+/* Ajuste para móviles */
+@media (max-width: 560px) {
+  .offer7k__showcase {
+    margin: 30px auto 40px;
   }
 }

@@ -9,24 +9,32 @@
    =========================== */
 :root {
   /* Colores principales */
-  --color-primary: #19BB94;      /* Verde principal */
-  --color-primary-alt: #22DFB2;  /* Variante */
-  --color-accent: #00FFCC;       /* Acento brillante */
-  --color-accent-soft: #79F1D5;  /* Acento suave */
+  --color-primary: #19BB94;
+  /* Verde principal */
+  --color-primary-alt: #22DFB2;
+  /* Variante */
+  --color-accent: #00FFCC;
+  /* Acento brillante */
+  --color-accent-soft: #79F1D5;
+  /* Acento suave */
 
   /* Neutros */
   --color-black: #000000;
   --color-white: #FFFFFF;
-  --color-bg-main: #FAFAFA;      /* fondo general suave */
-  --color-bg-header: #FAFAFA;    /* fondo header */
-  --color-bg-hover: #F5F5F5;     /* hover suave */
+  --color-bg-main: #FAFAFA;
+  /* fondo general suave */
+  --color-bg-header: #FAFAFA;
+  /* fondo header */
+  --color-bg-hover: #F5F5F5;
+  /* hover suave */
   --color-border-soft: #E0E0E0;
   --color-border-subtle: #CCCCCC;
   --color-border-item: #EEEEEE;
 
   /* Tipografías (asegúrate de importarlas en el HTML o CSS) */
   --font-heading: "Raleway", serif;
-  --font-heading-secundary: "Baskervville", serif; ; 
+  --font-heading-secundary: "Baskervville", serif;
+  ;
   --font-body: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --font-script: "Rhode White", "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 
@@ -59,16 +67,19 @@
 .offer7k__kicker {
   display: inline-block;
   font-family: var(--font-heading);
-  font-size: 29px;
+  font-size: 32px;
+  /* Aumentado de 29px */
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.55);
+  color: var(--color-black);
+  /* Cambiado de rgba a negro */
   margin-bottom: 10px;
 }
 
 .offer7k__title {
   font-family: var(--font-heading);
-  font-size: clamp(24px, 4.6vw, 40px);
+  font-size: clamp(28px, 5vw, 44px);
+  /* Aumentado de 24px/40px */
   line-height: 1.1;
   margin: 0 0 12px;
 }
@@ -80,6 +91,8 @@
   letter-spacing: 0.08em;
   color: var(--color-black);
   font-style: italic;
+  font-size: 16px;
+  /* Asegurando un buen tamaño base */
 }
 
 /* Si quieres que el highlight se vea como tus otras secciones */
@@ -90,9 +103,10 @@
 .offer7k__lead {
   max-width: 760px;
   margin: 0 auto 18px;
-  font-size: 18px;
+  font-size: 22px;
+  /* Aumentado de 20px */
   line-height: 1.7;
-  color: rgba(0, 0, 0, 0.72);
+  color: var(--color-black);
 }
 
 /* CTA centrado */
@@ -102,10 +116,12 @@
   gap: 8px;
   text-decoration: none;
   font-family: var(--font-heading);
-  font-size: 13px;
+  font-size: 15px;
+  /* Aumentado de 13px */
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding: 12px 18px;
+  padding: 14px 22px;
+  /* Ajustado el padding para el nuevo tamaño */
   border-radius: 999px;
   border: 1px solid rgba(0, 0, 0, 0.14);
   color: var(--color-black);
@@ -132,7 +148,8 @@
 /* Cards */
 .offer7k__card {
   position: relative;
-  padding: 18px 16px 16px;
+  padding: 20px 18px 18px;
+  /* Ligeramente más grande */
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.75);
   border: 1px solid rgba(0, 0, 0, 0.08);
@@ -151,11 +168,9 @@
   content: "";
   position: absolute;
   inset: -2px;
-  background: radial-gradient(
-    600px circle at var(--mx, 50%) var(--my, 50%),
-    rgba(34, 223, 178, 0.22),
-    transparent 55%
-  );
+  background: radial-gradient(600px circle at var(--mx, 50%) var(--my, 50%),
+      rgba(34, 223, 178, 0.22),
+      transparent 55%);
   opacity: 0;
   transition: opacity var(--transition-medium);
   pointer-events: none;
@@ -174,12 +189,14 @@
 
 /* Icono con hover pro */
 .offer7k__icon {
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  /* Aumentado de 44px */
+  height: 48px;
+  /* Aumentado de 44px */
   border-radius: 14px;
   display: grid;
   place-items: center;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   background: rgba(0, 0, 0, 0.04);
   border: 1px solid rgba(0, 0, 0, 0.08);
   transition: transform var(--transition-medium), background var(--transition-medium),
@@ -187,8 +204,10 @@
 }
 
 .offer7k__icon i {
-  font-size: 22px;
-  color: rgba(0, 0, 0, 0.75);
+  font-size: 24px;
+  /* Aumentado de 22px */
+  color: var(--color-black);
+  /* Cambiado a negro sólido */
   transition: transform var(--transition-medium), color var(--transition-medium);
 }
 
@@ -201,28 +220,31 @@
 
 .offer7k__card:hover .offer7k__icon i {
   transform: scale(1.12);
-  color: rgba(0, 0, 0, 0.9);
+  color: var(--color-black);
 }
 
 /* Textos */
 .offer7k__card-title {
   font-family: var(--font-heading);
-  font-size: 15px;
+  font-size: 19px;
+  /* Aumentado de 15px/17px */
   margin: 0 0 8px;
 }
 
 .offer7k__text {
   margin: 0;
-  font-size: 13px;
+  font-size: 17px;
+  /* Aumentado de 15px/13px */
   line-height: 1.65;
-  color: rgba(0, 0, 0, 0.72);
+  color: var(--color-black);
 }
 
 .offer7k__impact {
   display: inline-block;
   color: var(--color-black);
   font-style: italic;
-  font-size: 13px;
+  font-size: 17px;
+  /* Aumentado de 15px */
 }
 
 /* ===== Responsive ===== */
@@ -239,11 +261,18 @@
 
   .offer7k__grid {
     grid-template-columns: 1fr;
-    gap: 14px;
+    gap: 16px;
+    /* Ligeramente más separado en móvil */
   }
 
   .offer7k__lead {
-    font-size: 14px;
+    font-size: 18px;
+    /* Aumentado en móvil */
+  }
+
+  .offer7k__title {
+    font-size: 32px;
+    /* Asegura buen tamaño en móvil */
   }
 }
 
@@ -270,15 +299,19 @@
    ========================================= */
 
 .offer7k__impact-box {
-  margin-top: 40px; /* Separación de las tarjetas de arriba */
-  margin-bottom: 0; /* Sin margen abajo para pegarlo al siguiente bloque */
+  margin-top: 40px;
+  /* Separación de las tarjetas de arriba */
+  margin-bottom: 0;
+  /* Sin margen abajo para pegarlo al siguiente bloque */
   text-align: center;
   padding: 0 18px;
+  font-size: 22px;
+  /* Aseguramos que crezca también */
 }
 
 .offer7k__impact-box strong {
-  color: var(--color-primary); /* "Impacto común" en verde */
-  font-weight: 700;
+  color: var(--color-primary);
+  /* "Impacto común" en verde */
   font-family: var(--font-heading);
 }
 
@@ -289,26 +322,28 @@
 /* Título de las tarjetas */
 .offer7k__card-title {
   font-family: var(--font-heading);
-  font-size: 17px;
-  font-weight: 700;
+  font-size: 19px;
+  /* Aumentado de 17px */
   margin: 0 0 8px;
 }
 
 /* Descripción de las tarjetas */
 .offer7k__text {
   margin: 0;
-  font-size: 15px;
+  font-size: 17px;
+  /* Aumentado de 17px a 17px (ya lo habías subido, lo dejo igual para consistencia o sube a 18px si prefieres) */
   line-height: 1.65;
-  color: rgba(0, 0, 0, 0.72);
+  color: var(--color-black);
 }
 
 /* Texto de impacto común (fuera de las tarjetas) */
 .offer7k__impact-box {
-  margin-top: 40px; 
-  margin-bottom: 0; 
+  margin-top: 40px;
+  margin-bottom: 0;
   text-align: center;
   padding: 0 18px;
-  font-size: 18px; 
+  font-size: 22px;
+  /* Aumentado de 20px */
 }
 
 /* =====================================
@@ -329,17 +364,17 @@
 .emenu-tag {
   display: inline-block;
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 16px;
+  /* Aumentado de 14px */
   letter-spacing: 2px;
   color: var(--color-primary);
   margin-bottom: 15px;
-  font-weight: 600;
 }
 
 .emenu-title {
   font-family: var(--font-heading);
-  font-size: 48px;
-  font-weight: 700;
+  font-size: 52px;
+  /* Aumentado de 48px */
   margin-bottom: 20px;
   color: var(--color-black);
 }
@@ -350,10 +385,11 @@
 
 .emenu-description {
   font-family: var(--font-body);
-  font-size: 18px;
+  font-size: 22px;
+  /* Aumentado de 20px */
   max-width: 700px;
   margin: 0 auto 50px auto;
-  color: #555;
+  color: var(--color-black);
   line-height: 1.6;
 }
 
@@ -379,9 +415,11 @@
   background: var(--color-primary);
   color: var(--color-white);
   border: none;
-  padding: 12px 18px;
+  padding: 14px 22px;
+  /* Ligeramente más grande */
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 15px;
+  /* Aumentado de 14px */
   cursor: pointer;
   border-radius: 50px;
   transition: var(--transition-fast);
@@ -393,12 +431,31 @@
 
 /* RESPONSIVE */
 @media (max-width: 992px) {
-  .emenu-title { font-size: 38px; }
-  .emenu-description { font-size: 16px; }
+  .emenu-title {
+    font-size: 42px;
+    /* Aumentado de 38px */
+  }
+
+  .emenu-description {
+    font-size: 20px;
+    /* Aumentado de 18px */
+  }
 }
 
 @media (max-width: 600px) {
-  .emenu-section { padding: 70px 20px; }
-  .emenu-title { font-size: 28px; }
-  .sound-toggle { bottom: 15px; right: 15px; padding: 10px 14px; font-size: 13px; }
+  .emenu-section {
+    padding: 70px 20px;
+  }
+
+  .emenu-title {
+    font-size: 32px;
+    /* Aumentado de 28px */
+  }
+
+  .sound-toggle {
+    bottom: 15px;
+    right: 15px;
+    padding: 12px 18px;
+    font-size: 14px;
+  }
 }

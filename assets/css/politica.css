@@ -1,7 +1,8 @@
 /* ===== POLÍTICA DE PRIVACIDAD 7K ===== */
 .privacy7k {
   background: #ffffff;
-  color: #0b0f17;
+  color: var(--color-black);
+  /* Cambiado a negro sólido */
   padding: 70px 20px;
 }
 
@@ -16,22 +17,27 @@
 
 .privacy7k__title {
   font-family: var(--font-heading, "Montserrat", system-ui, sans-serif);
-  font-size: clamp(34px, 5vw, 56px);
+  font-size: clamp(36px, 5vw, 60px);
+  /* Aumentado de 34/56px */
   line-height: 1.05;
   margin-bottom: 12px;
 }
 
 .privacy7k__subtitle {
-  font-size: 16px;
+  font-size: 18px;
+  /* Aumentado de 16px */
   line-height: 1.8;
-  color: rgba(11, 15, 23, 0.78);
+  color: var(--color-black);
+  /* Cambiado de rgba a negro sólido */
   max-width: 900px;
 }
 
 .privacy7k__meta {
   margin-top: 12px;
-  font-size: 13px;
-  color: rgba(11, 15, 23, 0.6);
+  font-size: 15px;
+  /* Aumentado de 13px */
+  color: var(--color-black);
+  /* Cambiado de rgba a negro sólido */
 }
 
 /* Grid: TOC + content */
@@ -54,10 +60,12 @@
 }
 
 .privacy7k__toc-title {
-  font-size: 14px;
+  font-size: 16px;
+  /* Aumentado de 14px */
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(11, 15, 23, 0.65);
+  color: var(--color-black);
+  /* Cambiado de rgba a negro sólido */
   margin-bottom: 10px;
 }
 
@@ -69,8 +77,10 @@
 
 .privacy7k__toc-links a {
   text-decoration: none;
-  font-size: 14px;
-  color: rgba(11, 15, 23, 0.78);
+  font-size: 16px;
+  /* Aumentado de 14px */
+  color: var(--color-black);
+  /* Cambiado de rgba a negro sólido */
   padding: 10px 10px;
   border-radius: 12px;
   transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
@@ -78,7 +88,8 @@
 
 .privacy7k__toc-links a:hover {
   background: rgba(34, 223, 178, 0.12);
-  color: #0b0f17;
+  color: var(--color-black);
+  /* Cambiado a negro sólido */
   transform: translateX(2px);
 }
 
@@ -91,7 +102,7 @@
   box-shadow: 0 18px 50px rgba(15, 23, 42, 0.06);
 }
 
-.privacy7k__section + .privacy7k__section {
+.privacy7k__section+.privacy7k__section {
   margin-top: 22px;
   padding-top: 22px;
   border-top: 1px solid rgba(15, 23, 42, 0.08);
@@ -99,14 +110,17 @@
 
 .privacy7k__section h2 {
   font-family: var(--font-heading, "Montserrat", system-ui, sans-serif);
-  font-size: 18px;
+  font-size: 20px;
+  /* Aumentado de 18px */
   margin-bottom: 10px;
 }
 
 .privacy7k__section p {
-  font-size: 15px;
+  font-size: 17px;
+  /* Aumentado de 15px */
   line-height: 1.9;
-  color: rgba(11, 15, 23, 0.82);
+  color: var(--color-black);
+  /* Cambiado de rgba a negro sólido */
 }
 
 /* Contact box */
@@ -140,7 +154,8 @@
   }
 
   .privacy7k__subtitle {
-    font-size: 15px;
+    font-size: 17px;
+    /* Aumentado de 15px */
   }
 
   .privacy7k__content {
@@ -148,7 +163,8 @@
   }
 
   .privacy7k__toc-links a {
-    font-size: 13px;
+    font-size: 15px;
+    /* Aumentado de 13px */
     padding: 9px 10px;
   }
 }

@@ -9,24 +9,32 @@
    =========================== */
 :root {
   /* Colores principales */
-  --color-primary: #19BB94;      /* Verde principal */
-  --color-primary-alt: #22DFB2;  /* Variante */
-  --color-accent: #00FFCC;       /* Acento brillante */
-  --color-accent-soft: #79F1D5;  /* Acento suave */
+  --color-primary: #19BB94;
+  /* Verde principal */
+  --color-primary-alt: #22DFB2;
+  /* Variante */
+  --color-accent: #00FFCC;
+  /* Acento brillante */
+  --color-accent-soft: #79F1D5;
+  /* Acento suave */
 
   /* Neutros */
   --color-black: #000000;
   --color-white: #FFFFFF;
-  --color-bg-main: #FAFAFA;      /* fondo general suave */
-  --color-bg-header: #FAFAFA;    /* fondo header */
-  --color-bg-hover: #F5F5F5;     /* hover suave */
+  --color-bg-main: #FAFAFA;
+  /* fondo general suave */
+  --color-bg-header: #FAFAFA;
+  /* fondo header */
+  --color-bg-hover: #F5F5F5;
+  /* hover suave */
   --color-border-soft: #E0E0E0;
   --color-border-subtle: #CCCCCC;
   --color-border-item: #EEEEEE;
 
   /* Tipografías (asegúrate de importarlas en el HTML o CSS) */
   --font-heading: "Raleway", serif;
-  --font-heading-secundary: "Baskervville", serif; ; 
+  --font-heading-secundary: "Baskervville", serif;
+  ;
   --font-body: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --font-script: "Rhode White", "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 
@@ -40,7 +48,8 @@
    Variante: Consultoría
    ========================= */
 .offer7k--consultoria .offer7k__kicker {
-  color: rgba(0, 0, 0, 0.52);
+  color: var(--color-black);
+  /* Cambiado de rgba gris a negro sólido */
 }
 
 .offer7k--consultoria .offer7k__title span {

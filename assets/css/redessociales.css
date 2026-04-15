@@ -9,24 +9,32 @@
    =========================== */
 :root {
   /* Colores principales */
-  --color-primary: #19BB94;      /* Verde principal */
-  --color-primary-alt: #22DFB2;  /* Variante */
-  --color-accent: #00FFCC;       /* Acento brillante */
-  --color-accent-soft: #79F1D5;  /* Acento suave */
+  --color-primary: #19BB94;
+  /* Verde principal */
+  --color-primary-alt: #22DFB2;
+  /* Variante */
+  --color-accent: #00FFCC;
+  /* Acento brillante */
+  --color-accent-soft: #79F1D5;
+  /* Acento suave */
 
   /* Neutros */
   --color-black: #000000;
   --color-white: #FFFFFF;
-  --color-bg-main: #FAFAFA;      /* fondo general suave */
-  --color-bg-header: #FAFAFA;    /* fondo header */
-  --color-bg-hover: #F5F5F5;     /* hover suave */
+  --color-bg-main: #FAFAFA;
+  /* fondo general suave */
+  --color-bg-header: #FAFAFA;
+  /* fondo header */
+  --color-bg-hover: #F5F5F5;
+  /* hover suave */
   --color-border-soft: #E0E0E0;
   --color-border-subtle: #CCCCCC;
   --color-border-item: #EEEEEE;
 
   /* Tipografías (asegúrate de importarlas en el HTML o CSS) */
   --font-heading: "Raleway", serif;
-  --font-heading-secundary: "Baskervville", serif; ; 
+  --font-heading-secundary: "Baskervville", serif;
+  ;
   --font-body: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --font-script: "Rhode White", "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 
@@ -40,7 +48,8 @@
    Variante: Redes Sociales
    ========================= */
 .offer7k--social .offer7k__kicker {
-  color: rgba(0, 0, 0, 0.52);
+  color: var(--color-black);
+  /* Cambiado de rgba gris a negro sólido */
 }
 
 .offer7k--social .offer7k__title span {
@@ -68,15 +77,18 @@
 /* Textos */
 .offer7k__card-title {
   font-family: var(--font-heading);
-  font-size: 17px;
+  font-size: 19px;
+  /* Aumentado de 17px */
   margin: 0 0 8px;
 }
 
 .offer7k__text {
   margin: 0;
-  font-size: 15px;
+  font-size: 17px;
+  /* Aumentado de 15px */
   line-height: 1.65;
-  color: rgba(0, 0, 0, 0.72);
+  color: var(--color-black);
+  /* Cambiado de rgba gris a negro sólido */
 }
 
 
@@ -86,11 +98,12 @@
    ========================================= */
 
 .offer7k__impact-box {
-  margin-top: 40px; 
-  margin-bottom: 0; 
+  margin-top: 40px;
+  margin-bottom: 0;
   text-align: center;
   padding: 0 18px;
-  font-size: 18px;
+  font-size: 22px;
+  /* Aumentado de 18px */
 }
 
 
@@ -112,7 +125,8 @@
 .emenu-tag {
   display: inline-block;
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 16px;
+  /* Aumentado de 14px */
   letter-spacing: 2px;
   color: var(--color-primary);
   margin-bottom: 15px;
@@ -121,7 +135,8 @@
 
 .emenu-title {
   font-family: var(--font-heading);
-  font-size: 48px;
+  font-size: 52px;
+  /* Aumentado de 48px */
   font-weight: 700;
   margin-bottom: 20px;
   color: var(--color-black);
@@ -133,10 +148,12 @@
 
 .emenu-description {
   font-family: var(--font-body);
-  font-size: 18px;
+  font-size: 22px;
+  /* Aumentado de 18px */
   max-width: 700px;
   margin: 0 auto 50px auto;
-  color: #555;
+  color: var(--color-black);
+  /* Cambiado de #555 a negro sólido */
   line-height: 1.6;
 }
 
@@ -162,9 +179,11 @@
   background: var(--color-primary);
   color: var(--color-white);
   border: none;
-  padding: 12px 18px;
+  padding: 14px 22px;
+  /* Aumentado el padding */
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 15px;
+  /* Aumentado de 14px */
   cursor: pointer;
   border-radius: 50px;
   transition: var(--transition-fast);
@@ -176,12 +195,34 @@
 
 /* RESPONSIVE */
 @media (max-width: 992px) {
-  .emenu-title { font-size: 38px; }
-  .emenu-description { font-size: 16px; }
+  .emenu-title {
+    font-size: 42px;
+  }
+
+  /* Aumentado de 38px */
+  .emenu-description {
+    font-size: 20px;
+  }
+
+  /* Aumentado de 16px */
 }
 
 @media (max-width: 600px) {
-  .emenu-section { padding: 70px 20px; }
-  .emenu-title { font-size: 28px; }
-  .sound-toggle { bottom: 15px; right: 15px; padding: 10px 14px; font-size: 13px; }
+  .emenu-section {
+    padding: 70px 20px;
+  }
+
+  .emenu-title {
+    font-size: 32px;
+  }
+
+  /* Aumentado de 28px */
+  .sound-toggle {
+    bottom: 15px;
+    right: 15px;
+    padding: 12px 18px;
+    font-size: 14px;
+  }
+
+  /* Aumentado padding y font-size */
 }
