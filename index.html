@@ -2,41 +2,34 @@
 <html lang="es">
 
 <head>
-  <!-- Configuración básica -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>7K Digital | Agencia de Marketing en E.E.U.U especialista en menús digitales</title>
 
-  <!-- SEO básico -->
   <meta name="description"
-    content="7K Digital es una agencia de marketing en Seattle especializada en desarrollo de menús digitales para restaurantes, diseño de páginas web y gestión profesional de redes sociales." />
+    content="7K Digital is una agencia de marketing en Seattle especializada en desarrollo de menús digitales para restaurantes, diseño de páginas web y gestión profesional de redes sociales." />
   <meta name="keywords"
     content="7K Digital, agencia de marketing Seattle, menús digitales para restaurantes, marketing digital, desarrollo web, diseño de páginas web, redes sociales para negocios, publicidad digital" />
   <meta name="author" content="7K Digital" />
   <meta name="robots" content="index, follow" />
 
-  <!-- Canonical (ajusta la URL a la final de tu sitio) -->
   <link rel="canonical" href="https://www.7kdigital.net/" />
 
-  <!-- Open Graph / Previsualización en WhatsApp, Facebook, LinkedIn -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="7K Digital | Agencia de Marketing en Seattle" />
   <meta property="og:description"
     content="Impulsa tu restaurante o negocio con menús digitales, páginas web efectivas y estrategias de redes sociales diseñadas por 7K Digital." />
   <meta property="og:url" content="https://www.7kdigital.net/" />
-  <!-- Cambia por la URL absoluta de tu imagen destacada -->
   <meta property="og:image" content="https://www.7kdigital.net/assets/imagenes/preview-7k-digital.jpg" />
   <meta property="og:site_name" content="7K Digital" />
   <meta property="og:locale" content="es_US" />
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="7K Digital | Agencia de Marketing en Seattle" />
   <meta name="twitter:description"
     content="Especialistas en menús digitales para restaurantes, desarrollo web y gestión de redes sociales." />
   <meta name="twitter:image" content="https://www.7kdigital.net/assets/imagenes/preview-7k-digital.jpg" />
 
-  <!-- Datos estructurados (Schema.org) para mejorar SEO local -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -59,20 +52,448 @@
   }
   </script>
 
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="/assets/imagenes/logonegro.png" />
 
-  <!-- Remix Icons -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
 
-  <!-- CSS principal -->
   <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="/assets/css/servicios.css" />
+
+  <style>
+    /* --- Banner de Logos --- */
+    .clients-logos7k {
+      background: var(--color-bg-main, #FAFAFA);
+      padding: 60px 18px 80px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .clients-logos7k__title {
+      font-family: var(--font-heading, "Raleway", serif);
+      font-size: clamp(36px, 5vw, 56px);
+      font-weight: 800;
+      color: var(--color-black, #000);
+      margin-bottom: 50px;
+    }
+
+    .clients-logos7k__title span {
+      color: var(--color-primary-alt, #22DFB2);
+    }
+
+    .clients-logos7k__slider {
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
+      overflow: hidden;
+      position: relative;
+      mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+      -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    }
+
+    .clients-logos7k__track {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      width: max-content;
+      animation: scrollLogos7k 80s linear infinite;
+      will-change: transform;
+    }
+
+    .clients-logos7k__track:hover {
+      animation-play-state: paused;
+    }
+
+    .clients-logos7k__track img {
+      height: 80px;
+      width: auto;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+      transform: translateZ(0);
+    }
+
+    .clients-logos7k__track img:hover {
+      transform: scale(1.08);
+    }
+
+    @keyframes scrollLogos7k {
+      0% {
+        transform: translate3d(0, 0, 0);
+      }
+
+      100% {
+        transform: translate3d(calc(-50% - 30px), 0, 0);
+      }
+    }
+
+    /* --- Carrusel Testimonios en Video --- */
+    .testimonials7k {
+      background: var(--color-bg-main, #FAFAFA);
+      padding: 80px 18px;
+    }
+
+    .testimonials7k__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .testimonials7k__header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .testimonials7k__title {
+      font-family: var(--font-heading, "Raleway", serif);
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 800;
+      color: var(--color-black, #000);
+      margin-bottom: 15px;
+    }
+
+    .testimonials7k__title span {
+      color: var(--color-primary-alt, #22DFB2);
+    }
+
+    .testimonials7k__lead {
+      font-size: 18px;
+      color: rgba(0, 0, 0, 0.7);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .testimonials7k__carousel-wrapper {
+      position: relative;
+      padding: 0 60px;
+    }
+
+    .testimonials7k__carousel-track-container {
+      overflow: hidden;
+      padding: 15px 0;
+    }
+
+    .testimonials7k__carousel-track {
+      display: flex;
+      gap: 30px;
+      transition: transform 0.4s ease-in-out;
+      will-change: transform;
+    }
+
+    .testimonials7k__video-card {
+      flex: 0 0 calc((100% - 60px) / 3);
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(15, 23, 42, 0.06);
+      background: #000;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      aspect-ratio: 9/16;
+    }
+
+    .testimonials7k__video-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 25px 50px rgba(25, 187, 148, 0.12);
+    }
+
+    .testimonials7k__video-card video {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+
+    .testimonials7k__play-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 64px;
+      height: 64px;
+      background: rgba(25, 187, 148, 0.9);
+      color: #fff;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 32px;
+      box-shadow: 0 10px 30px rgba(25, 187, 148, 0.4);
+      transition: all 0.3s ease;
+      z-index: 2;
+      cursor: pointer;
+    }
+
+    .testimonials7k__play-btn:hover {
+      transform: translate(-50%, -50%) scale(1.1);
+      background: var(--color-primary-alt, #22DFB2);
+    }
+
+    .testimonials7k__arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 48px;
+      height: 48px;
+      background: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 24px;
+      color: var(--color-black);
+      cursor: pointer;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      z-index: 10;
+      transition: all 0.2s ease;
+    }
+
+    .testimonials7k__arrow:hover {
+      background: var(--color-primary);
+      color: #fff;
+      border-color: var(--color-primary);
+    }
+
+    .testimonials7k__arrow--prev {
+      left: 0;
+    }
+
+    .testimonials7k__arrow--next {
+      right: 0;
+    }
+
+    .testimonials7k__arrow:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+      background: #fff;
+      color: var(--color-black);
+      border-color: rgba(0, 0, 0, 0.08);
+    }
+
+    /* --- FAQ (Preguntas Frecuentes) --- */
+    .faq7k {
+      background: #fff;
+      padding: 80px 18px;
+    }
+
+    .faq7k__inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .faq7k__header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .faq7k__title {
+      font-family: var(--font-heading, "Raleway", serif);
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 800;
+      color: var(--color-black, #000);
+      margin-bottom: 15px;
+    }
+
+    .faq7k__title span {
+      color: var(--color-primary-alt, #22DFB2);
+    }
+
+    .faq7k__lead {
+      font-size: 18px;
+      color: rgba(0, 0, 0, 0.7);
+    }
+
+    .faq7k__list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .faq7k__item {
+      background: var(--color-bg-main, #FAFAFA);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: border-color 0.3s ease;
+    }
+
+    .faq7k__item.is-open {
+      border-color: var(--color-primary, #19BB94);
+    }
+
+    .faq7k__question {
+      width: 100%;
+      text-align: left;
+      padding: 20px 24px;
+      background: transparent;
+      border: none;
+      font-family: var(--font-heading, "Raleway", serif);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--color-black);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .faq7k__question:hover {
+      color: var(--color-primary);
+    }
+
+    .faq7k__question i {
+      font-size: 24px;
+      color: var(--color-primary);
+      transition: transform 0.3s ease;
+    }
+
+    .faq7k__item.is-open .faq7k__question i {
+      transform: rotate(180deg);
+    }
+
+    .faq7k__answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+
+    .faq7k__answer-inner {
+      padding: 0 24px 24px;
+      font-size: 16px;
+      line-height: 1.7;
+      color: rgba(0, 0, 0, 0.75);
+    }
+
+    .faq7k__answer-inner ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    .faq7k__answer-inner li {
+      margin-bottom: 8px;
+    }
+
+    .faq7k__answer-inner strong {
+      color: var(--color-black);
+    }
+
+    /* --- CTA Final --- */
+    .cta-final7k {
+      background-color: #0b0b0b;
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .cta-final7k__inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .cta-final7k__title {
+      font-family: var(--font-heading, "Raleway", serif);
+      font-size: clamp(36px, 6vw, 64px);
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.1;
+      margin-bottom: 24px;
+    }
+
+    .cta-final7k__desc {
+      font-size: clamp(16px, 3vw, 20px);
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.75);
+      margin-bottom: 40px;
+    }
+
+    .cta-final7k__btn {
+      display: inline-block;
+      background-color: var(--color-primary-alt, #22DFB2);
+      color: #000000;
+      font-family: var(--font-body, "Montserrat", sans-serif);
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 16px 36px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .cta-final7k__btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(34, 223, 178, 0.3);
+    }
+
+    @media (max-width: 900px) {
+      .clients-logos7k__track img {
+        height: 60px;
+      }
+
+      .clients-logos7k__track {
+        gap: 40px;
+      }
+
+      @keyframes scrollLogos7k {
+        0% {
+          transform: translate3d(0, 0, 0);
+        }
+
+        100% {
+          transform: translate3d(calc(-50% - 20px), 0, 0);
+        }
+      }
+
+      .testimonials7k__carousel-wrapper {
+        padding: 0 50px;
+      }
+
+      .testimonials7k__carousel-track {
+        gap: 24px;
+      }
+
+      .testimonials7k__video-card {
+        flex: 0 0 calc((100% - 24px) / 2);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .testimonials7k__carousel-wrapper {
+        padding: 0 40px;
+      }
+
+      .testimonials7k__carousel-track {
+        gap: 20px;
+      }
+
+      .testimonials7k__video-card {
+        flex: 0 0 100%;
+      }
+
+      .testimonials7k__arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+      }
+
+      .faq7k__question {
+        font-size: 16px;
+        padding: 16px 20px;
+      }
+
+      .faq7k__answer-inner {
+        padding: 0 20px 20px;
+        font-size: 15px;
+      }
+
+      .cta-final7k {
+        padding: 80px 20px;
+      }
+    }
+  </style>
 </head>
 
 
 <body>
 
-  <!-- LOADER 7K DIGITAL -->
   <div id="loader" class="loader">
     <div class="loader-panels">
       <div class="loader-panel loader-panel--left"></div>
@@ -83,17 +504,13 @@
       <div class="loader-progress-bar"></div>
     </div>
   </div>
-  <!-- /LOADER -->
-  <!-- ================= MENU ================= -->
   <header class="header" id="header">
     <div class="nav-container">
 
-      <!-- LOGO -->
       <a href="index.html" class="logo">
         <img src="/assets/imagenes/logonegro.png" alt="7K Digital Logo">
       </a>
 
-      <!-- LINKS DESKTOP -->
       <nav class="nav-links" id="nav-links">
         <a href="index.html">Inicio</a>
         <a href="/nosotros/">Nosotros</a>
@@ -102,14 +519,12 @@
         <a href="mailto:info@7kdigital.com" class="email">contacto@7kdigital.com</a>
       </nav>
 
-      <!-- ICON MENU (HAMBURGUESA / X) -->
       <div class="menu-toggle" id="menu-toggle">
         <i class="ri-menu-line"></i>
       </div>
 
     </div>
 
-    <!-- MENU MOBILE -->
     <nav class="mobile-menu" id="mobile-menu">
       <a href="index.html">Inicio</a>
       <a href="/nosotros/">Nosotros</a>
@@ -120,26 +535,20 @@
   </header>
 
 
-  <!-- SECTION AGENCIA 7K -->
   <section class="agency7k">
     <video class="agency7k__video" id="agency7kVideo" autoplay muted loop playsinline>
-      <!-- Cambia la ruta del video -->
       <source src="/assets/imagenes/video-website.mp4" type="video/mp4">
     </video>
 
-    <!-- Capa de degradado para legibilidad -->
     <div class="agency7k__overlay"></div>
-    <!-- Capa oscura adicional -->
     <div class="agency7k__dark"></div>
 
     <div class="agency7k__inner">
-      <!-- Botón volumen (lado izquierdo) -->
       <button class="agency7k__sound-toggle" id="agency7kSoundToggle" aria-label="Activar o desactivar sonido del video"
         type="button">
         <i class="ri-volume-mute-line"></i>
       </button>
 
-      <!-- Texto (lado derecho) -->
       <div class="agency7k__text">
         <span class="agency7k__kicker">Agencia de Marketing</span>
         <h2 class="agency7k__title">7K Digital</h2>
@@ -156,17 +565,11 @@
 
 
   </section>
-  <!-- /SECTION AGENCIA 7K -->
-
-  <!-- SECTION PROMESA DE VALOR 7K -->
   <section class="value7k reveal-on-scroll">
     <div class="value7k__inner">
 
-      <!-- Columna izquierda -->
       <div class="value7k__left">
-        <!-- Sello con logo -->
         <div class="value7k__seal">
-          <!-- Logo 7K -->
           <div class="value7k__logo">
             <img src="/assets/imagenes/logonegro.png" alt="7K Digital">
           </div>
@@ -180,7 +583,6 @@
         </p>
       </div>
 
-      <!-- Columna derecha -->
       <div class="value7k__right">
         <h2 class="value7k__title">
           Hacemos que tu presencia <span>online crezca de verdad.</span>
@@ -195,60 +597,144 @@
 
     </div>
   </section>
-  <!-- /SECTION PROMESA DE VALOR 7K -->
+  <section class="services7k" id="servicios">
+    <div class="services7k__inner">
+      <header class="services7k__head">
+        <h2 class="services7k__title">
+          Nuestros <span>servicios</span>
+        </h2>
+        <p class="services7k__lead">
+          Soluciones diseñadas para restaurantes hispanos que quieren vender mejor,
+          pagar menos comisiones y tomar decisiones claras con su POS y su menú.
+        </p>
+      </header>
 
+      <div class="services7k__grid">
 
-  <!-- Nueva seccion de Servicios -->
-  <section class="quickserv7k">
-    <div class="quickserv7k__inner">
+        <article class="services7k__card">
+          <div class="services7k__card-head">
+            <div class="services7k__icon-box">
+              <i class="ri-computer-line"></i>
+            </div>
+            <h3 class="services7k__name">eMenu</h3>
+          </div>
+          <p class="services7k__desc">
+            Un solo lugar donde tus clientes pueden conocerte, pedir, registrarse y volver.
+          </p>
+          <div class="services7k__card-foot">
+            <a class="services7k__btn-card" href="/website/">
+              Ver detalles <i class="ri-arrow-right-line"></i>
+            </a>
+          </div>
+        </article>
 
-      <h2 class="quickserv7k__title">Nuestros <span>servicios</span></h2>
+        <article class="services7k__card">
+          <div class="services7k__card-head">
+            <div class="services7k__icon-box">
+              <i class="ri-qr-code-line"></i>
+            </div>
+            <h3 class="services7k__name">Menú digital para restaurante</h3>
+          </div>
+          <p class="services7k__desc">
+            Pantallas que influyen en lo que el cliente pide y aumentan el ticket promedio.
+          </p>
+          <div class="services7k__card-foot">
+            <a class="services7k__btn-card" href="/menudigital/">
+              Ver detalles <i class="ri-arrow-right-line"></i>
+            </a>
+          </div>
+        </article>
 
-      <div class="quickserv7k__grid">
-        <a href="/website/" class="quickserv7k__card">
-          <div class="quickserv7k__icon"><i class="ri-computer-line"></i></div>
-          <span class="quickserv7k__name">eMenu</span>
-        </a>
+        <article class="services7k__card">
+          <div class="services7k__card-head">
+            <div class="services7k__icon-box">
+              <i class="ri-booklet-line"></i>
+            </div>
+            <h3 class="services7k__name">Diseño de menú estratégico</h3>
+          </div>
+          <p class="services7k__desc">
+            Convertimos tu menú en tu mejor vendedor, resaltando tus platillos estrella y
+            protegiendo tu margen.
+          </p>
+          <div class="services7k__card-foot">
+            <a class="services7k__btn-card" href="/menu-estrategico/">
+              Ver detalles <i class="ri-arrow-right-line"></i>
+            </a>
+          </div>
+        </article>
 
-        <a href="/menudigital/" class="quickserv7k__card">
-          <div class="quickserv7k__icon"><i class="ri-qr-code-line"></i></div>
-          <span class="quickserv7k__name">Menú digital para restaurante</span>
-        </a>
+        <article class="services7k__card">
+          <div class="services7k__card-head">
+            <div class="services7k__icon-box">
+              <i class="ri-instagram-line"></i>
+            </div>
+            <h3 class="services7k__name">Redes sociales + contenido</h3>
+          </div>
+          <p class="services7k__desc">
+            Contenido con intención: mostrar lo que conviene vender, no solo lo bonito.
+          </p>
+          <div class="services7k__card-foot">
+            <a class="services7k__btn-card" href="/redessociales/">
+              Ver detalles <i class="ri-arrow-right-line"></i>
+            </a>
+          </div>
+        </article>
 
-        <a href="/menu-estrategico/" class="quickserv7k__card">
-          <div class="quickserv7k__icon"><i class="ri-booklet-line"></i></div>
-          <span class="quickserv7k__name">Diseño de menú estratégico</span>
-        </a>
+        <article class="services7k__card">
+          <div class="services7k__card-head">
+            <div class="services7k__icon-box">
+              <i class="ri-customer-service-2-line"></i>
+            </div>
+            <h3 class="services7k__name">Programa de lealtad</h3>
+          </div>
+          <p class="services7k__desc">
+            Convierte clientes ocasionales en clientes que regresan.
+          </p>
+          <div class="services7k__card-foot">
+            <a class="services7k__btn-card" href="/crm/">
+              Ver detalles <i class="ri-arrow-right-line"></i>
+            </a>
+          </div>
+        </article>
 
-        <a href="/redessociales/" class="quickserv7k__card">
-          <div class="quickserv7k__icon"><i class="ri-instagram-line"></i></div>
-          <span class="quickserv7k__name">Redes sociales + contenido</span>
-        </a>
+        <article class="services7k__card">
+          <div class="services7k__card-head">
+            <div class="services7k__icon-box">
+              <i class="ri-megaphone-line"></i>
+            </div>
+            <h3 class="services7k__name">Campañas email marketing</h3>
+          </div>
+          <p class="services7k__desc">
+            Tráfico con estrategia, no anuncios a ciegas.
+          </p>
+          <div class="services7k__card-foot">
+            <a class="services7k__btn-card" href="/campañas/">
+              Ver detalles <i class="ri-arrow-right-line"></i>
+            </a>
+          </div>
+        </article>
 
-        <a href="/crm/" class="quickserv7k__card">
-          <div class="quickserv7k__icon"><i class="ri-customer-service-2-line"></i></div>
-          <span class="quickserv7k__name">Programa de lealtad</span>
-        </a>
+        <article class="services7k__card">
+          <div class="services7k__card-head">
+            <div class="services7k__icon-box">
+              <i class="ri-briefcase-4-line"></i>
+            </div>
+            <h3 class="services7k__name">Consultoría estratégica</h3>
+          </div>
+          <p class="services7k__desc">
+            Claridad para dejar de improvisar y tomar mejores decisiones.
+          </p>
+          <div class="services7k__card-foot">
+            <a class="services7k__btn-card" href="/consultoria/">
+              Ver detalles <i class="ri-arrow-right-line"></i>
+            </a>
+          </div>
+        </article>
 
-        <a href="/campañas/" class="quickserv7k__card">
-          <div class="quickserv7k__icon"><i class="ri-megaphone-line"></i></div>
-          <span class="quickserv7k__name">Campañas email marketing</span>
-        </a>
-
-        <a href="/consultoria/" class="quickserv7k__card">
-          <div class="quickserv7k__icon"><i class="ri-briefcase-4-line"></i></div>
-          <span class="quickserv7k__name">Consultoría estratégica</span>
-        </a>
       </div>
-
-      <div class="quickserv7k__foot">
-        <a href="/servicios/" class="quickserv7k__btn">
-          Ir a nuestra sección de Servicios <i class="ri-arrow-right-line"></i>
-        </a>
-      </div>
-
     </div>
   </section>
+
 
   <section class="clients7k" id="clientes">
     <div class="clients7k__wrap">
@@ -257,7 +743,6 @@
       </div>
 
       <div class="clients7k__grid">
-        <!-- Card 1 -->
         <a class="clients7k__card" href="https://lorenzosmexicanrestaurant.com/" target="_blank"
           rel="noopener noreferrer">
           <div class="clients7k__media">
@@ -276,7 +761,6 @@
           </div>
         </a>
 
-        <!-- Card 2 -->
         <a class="clients7k__card" href="https://choochootortasspokane.com/" target="_blank" rel="noopener noreferrer">
           <div class="clients7k__media">
             <img src="/assets/imagenes/sitio-2.png" alt="Choo Choo Tortas Spokane - Sitio web" loading="lazy" />
@@ -294,7 +778,6 @@
           </div>
         </a>
 
-        <!-- Card 3 -->
         <a class="clients7k__card" href="https://lasmargaritas-marysville.com/" target="_blank"
           rel="noopener noreferrer">
           <div class="clients7k__media">
@@ -313,7 +796,6 @@
           </div>
         </a>
 
-        <!-- Card 4 -->
         <a class="clients7k__card" href="https://ixtaparedmond.emenu7kdigital.com/" target="_blank"
           rel="noopener noreferrer">
           <div class="clients7k__media">
@@ -335,15 +817,62 @@
     </div>
   </section>
 
+  <section class="clients-logos7k">
+    <h2 class="clients-logos7k__title">Nuestros <span>Clientes</span></h2>
+
+    <div class="clients-logos7k__slider">
+      <div class="clients-logos7k__track">
+
+        <img src="/public/3margaritas.webp" alt="3 Margaritas">
+        <img src="/public/Apollo.webp" alt="Apollo">
+        <img src="/public/Arepa.webp" alt="Arepa">
+        <img src="/public/Birrieria PDX.webp" alt="Birrieria PDX">
+        <img src="/public/Carmelos.webp" alt="Carmelos">
+        <img src="/public/Centenario.webp" alt="Centenario">
+        <img src="/public/Choo Choo.webp" alt="Choo Choo">
+        <img src="/public/Dos chamucos.webp" alt="Dos Chamucos">
+        <img src="/public/El Charrito.webp" alt="El Charrito">
+        <img src="/public/Garcias.webp" alt="Garcias">
+        <img src="/public/Isla Bonita.webp" alt="Isla Bonita">
+        <img src="/public/Ixtapa.webp" alt="Ixtapa">
+        <img src="/public/Lorenzos.webp" alt="Lorenzos">
+        <img src="/public/Mama Chavez.webp" alt="Mama Chavez">
+        <img src="/public/Mazatlan.webp" alt="Mazatlan">
+        <img src="/public/Puerto de Angeles.webp" alt="Puerto de Angeles">
+        <img src="/public/Sabor a México.webp" alt="Sabor a México">
+        <img src="/public/Santa fe.webp" alt="Santa fe">
+        <img src="/public/Tepic.webp" alt="Tepic">
+        <img src="/public/Zapatas.webp" alt="Zapatas">
+
+        <img src="/public/3margaritas.webp" alt="3 Margaritas">
+        <img src="/public/Apollo.webp" alt="Apollo">
+        <img src="/public/Arepa.webp" alt="Arepa">
+        <img src="/public/Birrieria PDX.webp" alt="Birrieria PDX">
+        <img src="/public/Carmelos.webp" alt="Carmelos">
+        <img src="/public/Centenario.webp" alt="Centenario">
+        <img src="/public/Choo Choo.webp" alt="Choo Choo">
+        <img src="/public/Dos chamucos.webp" alt="Dos Chamucos">
+        <img src="/public/El Charrito.webp" alt="El Charrito">
+        <img src="/public/Garcias.webp" alt="Garcias">
+        <img src="/public/Isla Bonita.webp" alt="Isla Bonita">
+        <img src="/public/Ixtapa.webp" alt="Ixtapa">
+        <img src="/public/Lorenzos.webp" alt="Lorenzos">
+        <img src="/public/Mama Chavez.webp" alt="Mama Chavez">
+        <img src="/public/Mazatlan.webp" alt="Mazatlan">
+        <img src="/public/Puerto de Angeles.webp" alt="Puerto de Angeles">
+        <img src="/public/Sabor a México.webp" alt="Sabor a México">
+        <img src="/public/Santa fe.webp" alt="Santa fe">
+        <img src="/public/Tepic.webp" alt="Tepic">
+        <img src="/public/Zapatas.webp" alt="Zapatas">
+
+      </div>
+    </div>
+  </section>
 
 
-
-
-  <!-- SECTION EXPERTO SEO 7K -->
   <section class="expert7k">
     <div class="expert7k__grid">
 
-      <!-- Columna izquierda -->
       <article class="expert7k__card expert7k__card--left">
         <div class="expert7k__years">
           <span class="expert7k__years-number">8+</span>
@@ -357,7 +886,6 @@
 
         <div class="expert7k__avatars-block">
           <div class="expert7k__avatars">
-            <!-- Usa fotos reales de clientes o placeholders -->
             <img src="/assets/imagenes/client-1.png" alt="Cliente satisfecho 1">
             <img src="/assets/imagenes/client-2.png" alt="Cliente satisfecho 2">
             <img src="/assets/imagenes/client-3.png" alt="Cliente satisfecho 3">
@@ -369,10 +897,8 @@
         </div>
       </article>
 
-      <!-- Columna central (Salvador / SEO) -->
       <article class="expert7k__card expert7k__card--main">
         <div class="expert7k__photo-wrapper">
-          <!-- Cambia la ruta a la foto de Salvador -->
           <div class="expert7k__photo" style="background-image:url('/assets/imagenes/salvador.png');"></div>
 
           <div class="expert7k__awards">
@@ -398,9 +924,7 @@
         </div>
       </article>
 
-      <!-- Columna derecha -->
       <div class="expert7k__side">
-        <!-- Card redes sociales -->
         <article class="expert7k__card expert7k__card--social">
           <h3 class="expert7k__side-title">Síguenos</h3>
           <p class="expert7k__side-subtitle">
@@ -414,7 +938,6 @@
           </div>
         </article>
 
-        <!-- Card métricas -->
         <article class="expert7k__card expert7k__card--metrics">
           <h3 class="expert7k__side-title">Impacto</h3>
 
@@ -452,9 +975,266 @@
 
     </div>
   </section>
-  <!-- /SECTION EXPERTO SEO 7K -->
 
-  <!-- SLIDER TEXTO 7K DIGITAL -->
+  <section class="testimonials7k">
+    <div class="testimonials7k__inner">
+      <header class="testimonials7k__header">
+        <h2 class="testimonials7k__title">Lo que dicen <span>nuestros clientes</span></h2>
+        <p class="testimonials7k__lead">Testimonios reales de dueños de restaurantes que han transformado sus ventas con
+          7K Digital.</p>
+      </header>
+
+      <div class="testimonials7k__carousel-wrapper">
+        <button class="testimonials7k__arrow testimonials7k__arrow--prev" id="testPrev" aria-label="Anterior"><i
+            class="ri-arrow-left-s-line"></i></button>
+        <button class="testimonials7k__arrow testimonials7k__arrow--next" id="testNext" aria-label="Siguiente"><i
+            class="ri-arrow-right-s-line"></i></button>
+
+        <div class="testimonials7k__carousel-track-container">
+          <div class="testimonials7k__carousel-track" id="testTrack">
+
+            <div class="testimonials7k__video-card">
+              <video src="/public/TESTIMONIO AREPA.mp4" poster="/public/TESTIMONIO AREPA.webp" playsinline
+                preload="none"></video>
+              <div class="testimonials7k__play-btn" onclick="playTestimonial(this)"><i class="ri-play-fill"></i></div>
+            </div>
+
+            <div class="testimonials7k__video-card">
+              <video src="/public/TESTIMONIO DOS CHAMUCOS.mp4" poster="/public/TESTIMONIO DOS CHAMUCOS.webp" playsinline
+                preload="none"></video>
+              <div class="testimonials7k__play-btn" onclick="playTestimonial(this)"><i class="ri-play-fill"></i></div>
+            </div>
+
+            <div class="testimonials7k__video-card">
+              <video src="/public/TESTIMONIO GARCIAS.mp4" poster="/public/TESTIMONIO GARCIAS.webp" playsinline
+                preload="none"></video>
+              <div class="testimonials7k__play-btn" onclick="playTestimonial(this)"><i class="ri-play-fill"></i></div>
+            </div>
+
+            <div class="testimonials7k__video-card">
+              <video src="/public/TESTIMONIO SABOR A MEXICO.mp4" poster="/public/TESTIMONIO SABOR A MEXICO.webp"
+                playsinline preload="none"></video>
+              <div class="testimonials7k__play-btn" onclick="playTestimonial(this)"><i class="ri-play-fill"></i></div>
+            </div>
+
+            <div class="testimonials7k__video-card">
+              <video src="/public/TESTIMONIO TEPIC.mp4" poster="/public/TESTIMONIO TEPIC.webp" playsinline
+                preload="none"></video>
+              <div class="testimonials7k__play-btn" onclick="playTestimonial(this)"><i class="ri-play-fill"></i></div>
+            </div>
+
+            <div class="testimonials7k__video-card">
+              <video src="/public/TESTIMONIO ZAPATAS.mp4" poster="/public/TESTIMONIO ZAPATAS.webp" playsinline
+                preload="none"></video>
+              <div class="testimonials7k__play-btn" onclick="playTestimonial(this)"><i class="ri-play-fill"></i></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="faq7k">
+    <div class="faq7k__inner">
+      <header class="faq7k__header">
+        <h2 class="faq7k__title">Preguntas <span>frecuentes</span></h2>
+        <p class="faq7k__lead">Resolvemos tus dudas sobre cómo podemos ayudar a tu negocio a crecer.</p>
+      </header>
+
+      <div class="faq7k__list">
+
+        <div class="faq7k__item">
+          <button class="faq7k__question">¿Qué es 7K Digital Marketing? <i class="ri-arrow-down-s-line"></i></button>
+          <div class="faq7k__answer">
+            <div class="faq7k__answer-inner">
+              <p>Somos una agencia de marketing digital para negocios locales en Estados Unidos. Ayudamos a restaurantes
+                y otros negocios a crecer en línea: más clientes, más ventas y menos dependencia de plataformas de
+                terceros que se quedan con una parte de tus ganancias. </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq7k__item">
+          <button class="faq7k__question">¿Trabajan únicamente con restaurantes? <i
+              class="ri-arrow-down-s-line"></i></button>
+          <div class="faq7k__answer">
+            <div class="faq7k__answer-inner">
+              <p>No. Aunque los restaurantes son nuestro cliente principal, trabajamos con cualquier negocio local que
+                quiera crecer digitalmente: tiendas, empresas de construcción, compañías de limpieza, catering y
+                servicios profesionales. </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq7k__item">
+          <button class="faq7k__question">¿Qué servicios ofrecen? <i class="ri-arrow-down-s-line"></i></button>
+          <div class="faq7k__answer">
+            <div class="faq7k__answer-inner">
+              <ul>
+                <li><strong>eMenus</strong> — Tu sitio web propio: muestra tu menú o servicios, aparece en Google y
+                  convierte visitantes en clientes. </li>
+                <li><strong>Pedidos en Línea</strong> — Configuramos y lanzamos el sistema de pedidos que ya viene
+                  incluido en tu POS, para que recibas órdenes directas sin pagar comisiones a plataformas externas.
+                </li>
+                <li><strong>Menús Digitales para pantallas</strong> — Menús visuales dentro de tu negocio, actualizables
+                  y diseñados para que el cliente gaste más. </li>
+                <li><strong>Menús impresos</strong> — Diseño y producción alineados con tu marca. </li>
+                <li><strong>Redes Sociales</strong> — Contenido para Facebook, Instagram, TikTok y Google diseñado para
+                  atraer nuevos clientes, no solo acumular likes. </li>
+                <li><strong>Programa de Lealtad</strong> — Recompensas para que tus clientes regresen más seguido y
+                  construyas una base de datos propia. </li>
+                <li><strong>Email Marketing</strong> — Campañas para comunicarte con tus clientes y traerlos de regreso.
+                </li>
+                <li><strong>SEO y posicionamiento local</strong> — Para aparecer antes que tu competencia en las
+                  búsquedas de Google que importan. </li>
+                <li><strong>Automatización y CRM</strong> — Seguimiento automático con tus clientes desde el primer
+                  contacto hasta que se vuelven frecuentes. </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq7k__item">
+          <button class="faq7k__question">¿Qué es un eMenu y cómo funciona? <i
+              class="ri-arrow-down-s-line"></i></button>
+          <div class="faq7k__answer">
+            <div class="faq7k__answer-inner">
+              <p>Un eMenu es tu herramienta de ventas en línea. Muestra lo que ofreces, aparece en Google, genera
+                confianza y puede recibir pedidos, reservaciones o solicitudes de contacto — las 24 horas, aunque tu
+                negocio esté cerrado. A diferencia de Facebook o Instagram, es 100% tuyo: no depende de algoritmos ni
+                cambios de plataforma. Los textos, fotos y precios se pueden actualizar cuando lo necesites, y el
+                desarrollo toma entre 2 y 4 semanas. </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq7k__item">
+          <button class="faq7k__question">Ya tengo Facebook e Instagram. ¿Para qué necesito un eMenu? <i
+              class="ri-arrow-down-s-line"></i></button>
+          <div class="faq7k__answer">
+            <div class="faq7k__answer-inner">
+              <p>Las redes sociales ayudan a que te descubran. El eMenu es donde ese interés se convierte en acción: un
+                pedido, una llamada, una reservación. Además, cuando alguien busca en Google "restaurante mexicano cerca
+                de mí" o "empresa de limpieza en Seattle", Google no te muestra tu Instagram — te muestra tu eMenu
+                (sitio web). </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq7k__item">
+          <button class="faq7k__question">¿Por qué necesito un menú digital en pantalla si ya tengo menús impresos? <i
+              class="ri-arrow-down-s-line"></i></button>
+          <div class="faq7k__answer">
+            <div class="faq7k__answer-inner">
+              <p>Los menús digitales en pantalla hacen tres cosas que los impresos no pueden: se actualizan en segundos
+                cuando cambia un precio o hay un platillo agotado; muestran imágenes que despiertan el apetito justo
+                cuando el cliente está decidiendo qué pedir; y están diseñados para guiar la vista hacia lo que más
+                conviene vender. El resultado es un ticket promedio más alto sin necesidad de cambiar nada más en tu
+                operación. </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq7k__item">
+          <button class="faq7k__question">¿Vale la pena invertir en un menú impreso profesional? <i
+              class="ri-arrow-down-s-line"></i></button>
+          <div class="faq7k__answer">
+            <div class="faq7k__answer-inner">
+              <p>El menú es el documento más leído en tu restaurante — cada mesa lo toca y lo usa para decidir cuánto
+                gastar. Un menú mal diseñado transmite descuido aunque la comida sea excelente. Uno bien diseñado guía
+                al cliente hacia los platillos más rentables y comunica el nivel de tu negocio antes de que pruebe el
+                primer bocado. </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq7k__item">
+          <button class="faq7k__question">¿Cómo me ayudan a lanzar mi propio sistema de pedidos en línea? <i
+              class="ri-arrow-down-s-line"></i></button>
+          <div class="faq7k__answer">
+            <div class="faq7k__answer-inner">
+              <p>La mayoría de los sistemas POS modernos — Clover, Toast, SpotOn, Heartland, Square y otros — ya
+                incluyen una herramienta de pedidos en línea. El problema es que activarla y configurarla correctamente
+                toma tiempo y conocimiento técnico que la mayoría de los dueños no tienen. Nos encargamos de todo:
+                configuración, carga del menú, integración con tu sistema, pruebas y lanzamiento. Al final, tienes tu
+                propio canal de pedidos directos — sin pagar el 15% al 30% de comisión que cobran las plataformas de
+                delivery por cada orden. </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq7k__item">
+          <button class="faq7k__question">¿Qué diferencia hace recibir pedidos directos en lugar de usar DoorDash o Uber
+            Eats? <i class="ri-arrow-down-s-line"></i></button>
+          <div class="faq7k__answer">
+            <div class="faq7k__answer-inner">
+              <p>Cuando un cliente ordena por una app de delivery, esa plataforma se queda con entre 15% y 30% de cada
+                orden. En $10,000 de ventas mensuales, eso son hasta $3,000 que no llegan a tu bolsillo — y además, la
+                plataforma es dueña de la relación con ese cliente, no tú. Con pedidos directos, recibes el 100% del
+                pago y construyes una base de clientes propia. </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq7k__item">
+          <button class="faq7k__question">¿Qué es el Programa de Lealtad y cómo funciona? <i
+              class="ri-arrow-down-s-line"></i></button>
+          <div class="faq7k__answer">
+            <div class="faq7k__answer-inner">
+              <p>Es un sistema para recompensar a tus mejores clientes y motivarlos a regresar. Se registran escaneando
+                un código QR y pueden acumular puntos o recibir beneficios por cumpleaños, aniversarios o visitas
+                frecuentes. El valor real está en la base de datos: cada cliente registrado es alguien a quien puedes
+                contactar directamente con una oferta o novedad — sin depender del algoritmo de ninguna red social. </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq7k__item">
+          <button class="faq7k__question">¿Trabajan con negocios fuera de Seattle? <i
+              class="ri-arrow-down-s-line"></i></button>
+          <div class="faq7k__answer">
+            <div class="faq7k__answer-inner">
+              <p>Sí. Nuestro equipo está en Washington pero trabajamos con clientes en distintas ciudades de Estados
+                Unidos. </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq7k__item">
+          <button class="faq7k__question">¿Cuánto cuestan sus servicios? <i class="ri-arrow-down-s-line"></i></button>
+          <div class="faq7k__answer">
+            <div class="faq7k__answer-inner">
+              <p>Los precios varían según los servicios que necesitas y el tamaño de tu negocio. No hay un paquete único
+                — revisamos tu situación primero y te preparamos una propuesta específica. Agenda una consulta gratuita
+                y en 30 minutos sabes exactamente qué necesitas y cuánto cuesta. </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq7k__item">
+          <button class="faq7k__question">¿Cómo puedo empezar? <i class="ri-arrow-down-s-line"></i></button>
+          <div class="faq7k__answer">
+            <div class="faq7k__answer-inner">
+              <p>Agenda una consulta con nuestro equipo. Revisamos tu presencia digital actual, identificamos las áreas
+                con mayor oportunidad y te recomendamos qué hacer primero. </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-final7k">
+    <div class="cta-final7k__inner">
+      <h2 class="cta-final7k__title">Impulsa el crecimiento de tu negocio.</h2>
+      <p class="cta-final7k__desc">Soluciones digitales diseñadas para ayudarte a atraer clientes, fortalecer tu marca y
+        aumentar tus ventas.</p>
+      <a href="/contacto/" class="cta-final7k__btn">Contáctanos</a>
+    </div>
+  </section>
   <section class="textslider7k">
     <div class="textslider7k__mask">
       <div class="textslider7k__track">
@@ -463,7 +1243,6 @@
         <span>Estrategias digitales pensadas para crecer tu negocio, no solo tus likes. </span>
         <span>7K Digital: marketing diseñado para vender más a la comunidad hispana. </span>
 
-        <!-- Duplicado para loop infinito -->
         <span>Menús digitales que convierten visitas en clientes. </span>
         <span>Sitios web rápidos que venden por ti 24/7. </span>
         <span>Estrategias digitales pensadas para crecer tu negocio, no solo tus likes. </span>
@@ -471,17 +1250,9 @@
       </div>
     </div>
   </section>
-  <!-- /SLIDER TEXTO 7K DIGITAL -->
-
-
-
-
-
-  <!-- ===== FOOTER 7K DIGITAL ===== -->
   <footer class="footer7k">
     <div class="footer7k__inner">
 
-      <!-- Fila 1: Logo + servicios -->
       <div class="footer7k__top">
         <div class="footer7k__brand">
           <img src="/assets/imagenes/logoblanco.png" alt="7K Digital" class="footer7k__logo" />
@@ -497,14 +1268,12 @@
         </div>
       </div>
 
-      <!-- Fila 2: navegación -->
       <nav class="footer7k__nav">
         <a href="/nosotros/">Nosotros</a>
         <a href="/servicios/">Servicios</a>
         <a href="/contacto/">Contacto</a>
       </nav>
 
-      <!-- Fila 3: redes sociales -->
       <div class="footer7k__social">
         <a href="https://www.instagram.com/7k.digital.oficial/" target="_blank" aria-label="Instagram">
           <i class="ri-instagram-line"></i>
@@ -524,7 +1293,6 @@
         </a>
       </div>
 
-      <!-- Fila 4: legales + copy -->
       <div class="footer7k__bottom">
         <div class="footer7k__legal">
           <a href="/politica/">Términos y condiciones</a>
@@ -533,23 +1301,121 @@
           <span class="footer7k__divider">|</span>
           <a href="/politica/">Política de cookies</a>
         </div>
-        <p class="footer7k__copy">
+        <div class="footer7k__copy">
           © 2025 7K Digital. Todos los derechos reservados.
-        </p>
+        </div>
       </div>
     </div>
   </footer>
-  <!-- /FOOTER 7K DIGITAL -->
-
-
-  <!-- Botón flotante WhatsApp -->
   <a href="https://wa.me/13607713155" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
     aria-label="Contáctanos por WhatsApp">
     <i class="ri-whatsapp-line"></i>
   </a>
 
-  <!-- JS -->
   <script src="/assets/js/script.js"></script>
+
+  <script>
+    // 1. Lógica del Reproductor de Video
+    function playTestimonial(btn) {
+      const card = btn.parentElement;
+      const video = card.querySelector('video');
+
+      // Detiene todos los demás videos para que no se empalmen audios
+      document.querySelectorAll('.testimonials7k__video-card video').forEach(v => {
+        if (v !== video) {
+          v.pause();
+          v.removeAttribute('controls');
+          // Regresa el botón de play a los videos inactivos
+          const otherBtn = v.parentElement.querySelector('.testimonials7k__play-btn');
+          if (otherBtn) otherBtn.style.display = 'grid';
+        }
+      });
+
+      // Reproduce el video al que le dimos clic
+      if (video.paused) {
+        video.setAttribute('controls', 'controls');
+        video.play();
+        btn.style.display = 'none';
+      }
+    }
+
+    // 2. Lógica del Carrusel de Testimonios
+    document.addEventListener('DOMContentLoaded', () => {
+      const track = document.getElementById('testTrack');
+      const btnPrev = document.getElementById('testPrev');
+      const btnNext = document.getElementById('testNext');
+      const cards = track.querySelectorAll('.testimonials7k__video-card');
+
+      let currentIndex = 0;
+
+      function updateCarousel() {
+        let cardsVisible = 3;
+        if (window.innerWidth <= 900) cardsVisible = 2;
+        if (window.innerWidth <= 600) cardsVisible = 1;
+
+        const maxIndex = cards.length - cardsVisible;
+        if (currentIndex > maxIndex) currentIndex = maxIndex;
+        if (currentIndex < 0) currentIndex = 0;
+
+        const cardWidth = cards[0].getBoundingClientRect().width;
+        let gap = 30;
+        if (window.innerWidth <= 900) gap = 24;
+        if (window.innerWidth <= 600) gap = 20;
+
+        const moveAmount = currentIndex * (cardWidth + gap);
+        track.style.transform = `translateX(-${moveAmount}px)`;
+
+        btnPrev.disabled = currentIndex === 0;
+        btnNext.disabled = currentIndex === maxIndex;
+      }
+
+      btnNext.addEventListener('click', () => {
+        let cardsVisible = 3;
+        if (window.innerWidth <= 900) cardsVisible = 2;
+        if (window.innerWidth <= 600) cardsVisible = 1;
+
+        if (currentIndex < cards.length - cardsVisible) {
+          currentIndex++;
+          updateCarousel();
+        }
+      });
+
+      btnPrev.addEventListener('click', () => {
+        if (currentIndex > 0) {
+          currentIndex--;
+          updateCarousel();
+        }
+      });
+
+      window.addEventListener('resize', updateCarousel);
+      updateCarousel();
+    });
+
+    // 3. Lógica del Acordeón FAQ
+    document.querySelectorAll('.faq7k__question').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.parentElement;
+        const answer = item.querySelector('.faq7k__answer');
+
+        // Cierra los demás acordeones para mantener todo limpio
+        document.querySelectorAll('.faq7k__item').forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove('is-open');
+            otherItem.querySelector('.faq7k__answer').style.maxHeight = null;
+          }
+        });
+
+        // Alterna abrir/cerrar el actual
+        if (item.classList.contains('is-open')) {
+          item.classList.remove('is-open');
+          answer.style.maxHeight = null;
+        } else {
+          item.classList.add('is-open');
+          answer.style.maxHeight = answer.scrollHeight + "px";
+        }
+      });
+    });
+  </script>
 
 </body>
 
